@@ -8,7 +8,7 @@
 
 - Root on Heroku:
 
-  [https://dashboard.heroku.com/apps/zheng-rui-webdev](https://dashboard.heroku.com/apps/zheng-rui-webdev)
+  https://zheng-rui-webdev.herokuapp.com
 
 - Link to Projest:
 
