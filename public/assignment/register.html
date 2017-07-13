@@ -2,9 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Register</title>
+    <link href="../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+
 </head>
+
 <body>
-$END$
+
+<div class="container-fluid">
+
+    <h2>Register</h2>
+
+
+    <label for="username"> Username</label>
+    <input name="username"
+           class="form-control"
+           id="username"
+           placeholder="username"/>
+
+    <label for="password"> Password</label>
+    <input name="password"
+           type="password"
+           class="form-control"
+           id="password"
+           placeholder="passwprd"/>
+
+    <label for="verifyPassword"> Password</label>
+    <input name="password"
+           type="password"
+           class="form-control"
+           id="verifyPassword"
+           placeholder="verify password"/>
+
+    <a class="btn btn-default btn-block btn-primary"
+       href="profile.html"
+       role="button">Register</a>
+    <a class="btn btn-default btn-block btn-danger"
+       href="Login.html"
+       role="button">Cancel</a>
+</div>
+
+
 </body>
 </html>
