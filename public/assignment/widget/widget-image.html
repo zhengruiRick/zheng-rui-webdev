@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wigdet Edit (Image)</title>
+    <link href="../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+
+</head>
+
+<body>
+
+<div class="rz rz-widget">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="wigdet-list.html">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="navbar-brand" href="#">Wigdet Edit</a>
+            <a class="navbar-brand rz-navbar-right-icon" href="wigdet-list.html">
+                <span class="glyphicon glyphicon-ok"></span>
+            </a>
+
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 hidden-xs rz-split-view-left">
+
+                <div class="container-fluid">
+                    <ul class="list-group">
+
+                        <li class="list-group-item">
+                            Address Book App
+                            <a href="website/website-edit.html">
+                                <span class="pull-right glyphicon glyphicon-cog"> </span>
+                            </a>
+                        </li>
+
+                        <li class="list-group-item">
+                            Blogger
+                            <a href="website/website-edit.html">
+                                <span class="pull-right glyphicon glyphicon-cog"> </span>
+                            </a>
+                        </li>
+
+                        <li class="list-group-item">
+                            Blogger App
+                            <a href="website/website-edit.html">
+                                <span class="pull-right glyphicon glyphicon-cog"> </span>
+                            </a>
+                        </li>
+
+                        <li class="list-group-item">
+                            Script App
+                            <a href="website/website-edit.html">
+                                <span class="pull-right glyphicon glyphicon-cog"> </span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="col-xs-12 col-sm-8 pull-right rz-split-view-right">
+
+            <label for="widget-image-name">Name</label>
+                <input name="widget-image-name"
+                       class="form-control"
+                       id="widget-image-name"
+                       placeholder="Widget name"/></input>
+
+                <label for="widget-image-text">Text</label>
+                <input name="widget-image-text"
+                       class="form-control"
+                       id="widget-image-text"
+                       placeholder="Enter Widget Text Here"></input>
+
+                <label for="widget-image-url">URL</label>
+                <input name="widget-image-url"
+                       class="form-control"
+                       id="widget-image-url"
+                       type="url"
+                       placeholder="Enter Image URL Here"></input>
+
+                <label for="widget-image-width">Width</label>
+                <input name="widget-image-width"
+                       class="form-control"
+                       id="widget-image-width"
+                       type="number"
+                       placeholder="Enter % Here, Only number please"></input>
+
+                <label for="widget-image-upload">Upload</label>
+                <input name="widget-image-upload"
+                       class="form-control"
+                       id="widget-image-upload"
+                       type="file"
+                       placeholder=""></input>
+
+                <a class="btn btn-default btn-block btn-success"
+                   href="wigdet-image.html"
+                   role="button">Upload Image</a>
+
+                <a class="btn btn-default btn-block btn-danger"
+                   href="wigdet-list.html"
+                   role="button">Delete</a>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <a class="navbar-brand rz-navbar-right-icon" href="user/profile.html">
+            <span class="glyphicon glyphicon-user"></span>
+        </a>
+    </nav>
+
+</div>
+
+
+</body>
+</html>
