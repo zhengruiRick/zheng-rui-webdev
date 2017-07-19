@@ -3,27 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b81c1a5e-6902-41a8-a358-271e48023318" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/css/style.css" afterPath="$PROJECT_DIR$/public/assignment/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/index.html" afterPath="$PROJECT_DIR$/public/assignment/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/page/page-edit.html" afterPath="$PROJECT_DIR$/public/assignment/page/page-edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/page/page-list.html" afterPath="$PROJECT_DIR$/public/assignment/page/page-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/page/page-new.html" afterPath="$PROJECT_DIR$/public/assignment/page/page-new.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/user/login.html" afterPath="$PROJECT_DIR$/public/assignment/user/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/user/profile.html" afterPath="$PROJECT_DIR$/public/assignment/user/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/user/register.html" afterPath="$PROJECT_DIR$/public/assignment/user/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/website/website-edit.html" afterPath="$PROJECT_DIR$/public/assignment/website/website-edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/website/website-list.html" afterPath="$PROJECT_DIR$/public/assignment/website/website-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/website/website-new.html" afterPath="$PROJECT_DIR$/public/assignment/website/website-new.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/widget/widget-chooser.html" afterPath="$PROJECT_DIR$/public/assignment/widget/widget-chooser.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/widget/widget-heading.html" afterPath="$PROJECT_DIR$/public/assignment/widget/widget-heading.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/widget/widget-image.html" afterPath="$PROJECT_DIR$/public/assignment/widget/widget-image.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/widget/widget-list.html" afterPath="$PROJECT_DIR$/public/assignment/widget/widget-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/widget/widget-youtube.html" afterPath="$PROJECT_DIR$/public/assignment/widget/widget-youtube.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/index.html" afterPath="$PROJECT_DIR$/public/lectures/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/user-interface-development/grid-bootstrap-large.html" afterPath="$PROJECT_DIR$/public/lectures/user-interface-development/grid-bootstrap-large.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/user-interface-development/grid-bootstrap-medium.html" afterPath="$PROJECT_DIR$/public/lectures/user-interface-development/grid-bootstrap-medium.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/user-interface-development/grid.html" afterPath="$PROJECT_DIR$/public/lectures/user-interface-development/grid.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/user-interface-development/index.html" afterPath="$PROJECT_DIR$/public/lectures/user-interface-development/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -64,7 +44,47 @@
         <entry file="file://$PROJECT_DIR$/public/assignment/user/login.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+              <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assignment/user/profile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="89" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="theme.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assignment/css/theme.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assignment/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assignment/user/register.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -150,7 +170,6 @@
         <option value="$PROJECT_DIR$/public/assignment/css/style.css" />
         <option value="$PROJECT_DIR$/public/assignment/index.html" />
         <option value="$PROJECT_DIR$/public/assignment/user/profile.html" />
-        <option value="$PROJECT_DIR$/public/assignment/user/register.html" />
         <option value="$PROJECT_DIR$/public/assignment/website/website-list.html" />
         <option value="$PROJECT_DIR$/public/assignment/website/website-new.html" />
         <option value="$PROJECT_DIR$/public/assignment/page/page-list.html" />
@@ -164,6 +183,7 @@
         <option value="$PROJECT_DIR$/public/assignment/widget/widget-youtube.html" />
         <option value="$PROJECT_DIR$/public/assignment/widget/widget-image.html" />
         <option value="$PROJECT_DIR$/public/assignment/widget/widget-heading.html" />
+        <option value="$PROJECT_DIR$/public/assignment/user/register.html" />
         <option value="$PROJECT_DIR$/public/assignment/user/login.html" />
       </list>
     </option>
@@ -180,8 +200,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-5" />
-    <option name="y" value="174" />
+    <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="863" />
   </component>
@@ -644,15 +663,15 @@
       <workItem from="1499802063994" duration="750000" />
       <workItem from="1499867894971" duration="23070000" />
       <workItem from="1500081007084" duration="32563000" />
-      <workItem from="1500411692839" duration="11069000" />
+      <workItem from="1500411692839" duration="11382000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72448000" />
+    <option name="totallyTimeSpent" value="72761000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="174" width="1440" height="863" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="863" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2149401" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -923,42 +942,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment/css/theme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assignment/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
           <caret line="80" column="11" lean-forward="false" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment/user/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="89" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment/user/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="52" lean-forward="true" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assignment/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-912">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1055,10 +1042,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/user/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/css/theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assignment/user/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="89" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/assignment/user/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
           <folding />
         </state>
       </provider>
