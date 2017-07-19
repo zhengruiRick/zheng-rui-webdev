@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Website new</title>
-    <link href="../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="css/style.css" rel="stylesheet"/>
+    <link href="../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/style.css" rel="stylesheet"/>
 
 </head>
 
@@ -17,11 +17,11 @@
             <div class="container-fluid">
 
 
-                <a class="navbar-brand" href="website/website-list.html">
+                <a class="navbar-brand" href="website-list.html">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
                 <a class="navbar-brand" href="#">New Websites</a>
-                <a class="navbar-brand rz-navbar-right-icon" href="website/website-list.html">
+                <a class="navbar-brand rz-navbar-right-icon" href="website-list.html">
                     <span class="glyphicon glyphicon-ok"></span>
                 </a>
 
@@ -35,7 +35,7 @@
         <div class="row">
             <div class="col-sm-4 hidden-xs rz-split-view-left">
 
-            <div class="container-fluid">
+                <div class="container-fluid">
                     <ul class="list-group">
 
                         <li class="list-group-item">
@@ -73,23 +73,24 @@
 
             <div class="col-xs-12 col-sm-8 pull-right rz-split-view-right">
 
-                <label for="name"> Name</label>
-                <input name="name"
+                <label for="website-name"> Name</label>
+                <input name="website-name"
                        class="form-control"
                        id="Name"
+                       type="text"
                        placeholder="Name"/>
 
-                <label for="description"> Discription</label>
-                <textarea name="lastname"
+                <label for="website-descroption"> Discription</label>
+                <textarea name="website-descroption"
                           type="email"
                           class="form-control"
                           rows="5"
-                          id="description"
+                          id="website-descroption"
                           placeholder="Discription"></textarea>
 
 
                 <a class="btn btn-default btn-block btn-danger"
-                   href="website/website-list.html"
+                   href="website-list.html"
                    role="button">Cancel</a>
 
             </div>
@@ -99,7 +100,7 @@
     </div>
 
     <nav class="navbar navbar-default navbar-fixed-bottom">
-        <a class="navbar-brand rz-navbar-right-icon" href="user/profile.html">
+        <a class="navbar-brand rz-navbar-right-icon" href="../user/profile.html">
             <span class="glyphicon glyphicon-user"></span>
         </a>
     </nav>

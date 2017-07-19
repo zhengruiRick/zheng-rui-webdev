@@ -3,40 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-    <link href="../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="css/style.css" rel="stylesheet"/>
+    <link href="../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/style.css" rel="stylesheet"/>
 
 </head>
 
-<body>
+<body class="rz rz-user">
 
 <div class="container-fluid">
 
     <h2>Register</h2>
 
 
-    <label for="username"> Username</label>
-    <input name="username"
+    <label for="register-username"> Username</label>
+    <input name="register-username"
            class="form-control"
-           id="username"
+           id="register-username"
+           type="text"
            placeholder="username"/>
 
-    <label for="password"> Password</label>
-    <input name="password"
+    <label for="register-password"> Password</label>
+    <input name="register-password"
            type="password"
            class="form-control"
-           id="password"
+           id="register-password"
            placeholder="passwprd"/>
 
-    <label for="verifyPassword"> Password</label>
-    <input name="password"
+    <label for="register-verify-password"> Password</label>
+    <input name="register-verify-password"
            type="password"
            class="form-control"
-           id="verifyPassword"
+           id="register-verify-password"
            placeholder="verify password"/>
 
     <a class="btn btn-default btn-block btn-primary"
-       href="user/profile.html"
+       href="profile.html"
        role="button">Register</a>
     <a class="btn btn-default btn-block btn-danger"
        href="Login.html"

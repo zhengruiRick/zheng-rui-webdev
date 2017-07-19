@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Wigdet Edit (Header)</title>
-    <link href="../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="css/style.css" rel="stylesheet"/>
+    <title>Widget Edit (Header)</title>
+    <link href="../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/style.css" rel="stylesheet"/>
 
 </head>
 
@@ -14,11 +14,11 @@
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="wigdet-list.html">
+            <a class="navbar-brand" href="widget-list.html">
                 <span class="glyphicon glyphicon-chevron-left"></span>
             </a>
             <a class="navbar-brand" href="#">Wigdet Edit</a>
-            <a class="navbar-brand rz-navbar-right-icon" href="wigdet-list.html">
+            <a class="navbar-brand rz-navbar-right-icon" href="widget-list.html">
                 <span class="glyphicon glyphicon-ok"></span>
             </a>
 
@@ -30,36 +30,69 @@
         <div class="row">
             <div class="col-sm-4 hidden-xs rz-split-view-left">
 
-            <div class="container-fluid">
+                <div class="container-fluid">
                     <ul class="list-group">
 
                         <li class="list-group-item">
-                            Address Book App
-                            <a href="website/website-edit.html">
-                                <span class="pull-right glyphicon glyphicon-cog"> </span>
+                            <a href="widget-heading.html">
+                                Header
                             </a>
                         </li>
 
                         <li class="list-group-item">
-                            Blogger
-                            <a href="website/website-edit.html">
-                                <span class="pull-right glyphicon glyphicon-cog"> </span>
+                            <a href="widget-label.html">
+                                Label(Not Create Yet)
                             </a>
                         </li>
 
                         <li class="list-group-item">
-                            Blogger App
-                            <a href="website/website-edit.html">
-                                <span class="pull-right glyphicon glyphicon-cog"> </span>
+                            <a href="widget-HTML.html">
+                                HTML(Not Create Yet)
                             </a>
                         </li>
 
                         <li class="list-group-item">
-                            Script App
-                            <a href="website/website-edit.html">
-                                <span class="pull-right glyphicon glyphicon-cog"> </span>
+                            <a href="widget-text-input.html">
+                                Text Input(Not Create Yet)
                             </a>
                         </li>
+
+                        <li class="list-group-item">
+                            <a href="widget-link.html">
+                                Link(Not Create Yet)
+                            </a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a href="widget-button.html">
+                                Button(Not Create Yet)
+                            </a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a href="widget-image.html">
+                                Image
+                            </a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a href="widget-youtube.html">
+                                Youtube
+                            </a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a href="widget-data-table.html">
+                                Data Table(Not Create Yet)
+                            </a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a href="widge-repeater.html">
+                                Repeter(Not Create Yet)
+                            </a>
+                        </li>
+
 
                     </ul>
                 </div>
@@ -68,28 +101,30 @@
 
             <div class="col-xs-12 col-sm-8 pull-right rz-split-view-right">
 
-            <label for="widget-page-name">Name</label>
-                <input name="widget-page-name"
+                <label for="widget-heading-name">Name</label>
+                <input name="widget-heading-name"
                        class="form-control"
-                       id="widget-page-name"
+                       type="text"
+                       id="widget-heading-name"
                        placeholder="Widget name"/></input>
 
-                <label for="widget-page-text">Text</label>
+                <label for="widget-heading-text">Text</label>
                 <input name="widget-page-text"
-                          class="form-control"
-                          id="widget-page-text"
-                          placeholder="Enter Widget Text Here"></input>
-
-                <label for="widget-page-size">Size</label>
-                <input name="widget-page-size"
                        class="form-control"
-                       id="widget-page-size"
+                       type="text"
+                       id="widget-heading-text"
+                       placeholder="Enter Widget Text Here"></input>
+
+                <label for="widget-heading-size">Size</label>
+                <input name="widget-heading-size"
+                       class="form-control"
+                       id="widget-heading-size"
                        type="number"
                        placeholder="Enter Number Here"></input>
 
 
                 <a class="btn btn-default btn-block btn-danger"
-                   href="wigdet-list.html"
+                   href="widget-list.html"
                    role="button">Delete</a>
 
             </div>
@@ -99,7 +134,7 @@
     </div>
 
     <nav class="navbar navbar-default navbar-fixed-bottom">
-        <a class="navbar-brand rz-navbar-right-icon" href="user/profile.html">
+        <a class="navbar-brand rz-navbar-right-icon" href="../user/profile.html">
             <span class="glyphicon glyphicon-user"></span>
         </a>
     </nav>

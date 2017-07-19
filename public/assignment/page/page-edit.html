@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Page Edit</title>
-    <link href="../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="css/style.css" rel="stylesheet"/>
+    <link href="../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/style.css" rel="stylesheet"/>
 
 </head>
 
@@ -27,7 +27,7 @@
             </div>
 
 
-            </div>
+        </div>
     </nav>
 
 
@@ -35,34 +35,54 @@
         <div class="row">
             <div class="col-sm-4 hidden-xs rz-split-view-left">
 
-            <div class="container-fluid">
+                <div class="container-fluid">
                     <ul class="list-group">
+                        <li class="list-group-item">
+
+                            <a href="../widget/widget-list.html">
+                                Blog Post
+                            </a>
+                            <a href="page-edit.html">
+                                <span class="pull-right glyphicon glyphicon-cog"> </span>
+                            </a>
+
+                        </li>
 
                         <li class="list-group-item">
-                            Address Book App
-                            <a href="website-edit.html">
-                                <span class="pull-right glyphicon glyphicon-cog"> </span>
+
+                            <a href="../widget/widget-list.html">
+                                Blogs
+                            </a>
+                            <a href="page-edit.html">
+                                <span class="pull-right glyphicon glyphicon-cog"></span>
                             </a>
                         </li>
 
                         <li class="list-group-item">
-                            Blogger
-                            <a href="website-edit.html">
-                                <span class="pull-right glyphicon glyphicon-cog"> </span>
+
+                            <a href="../widget/widget-list.html">
+                                Home
+                            </a>
+                            <a href="page-edit.html">
+                                <span class="pull-right glyphicon glyphicon-cog"></span>
                             </a>
                         </li>
-
                         <li class="list-group-item">
-                            Blogger App
-                            <a href="website-edit.html">
-                                <span class="pull-right glyphicon glyphicon-cog"> </span>
+
+                            <a href="../widget/widget-list.html">
+                                About
+                            </a>
+                            <a href="page-edit.html">
+                                <span class="pull-right glyphicon glyphicon-cog"></span>
                             </a>
                         </li>
-
                         <li class="list-group-item">
-                            Script App
-                            <a href="website-edit.html">
-                                <span class="pull-right glyphicon glyphicon-cog"> </span>
+
+                            <a href="../widget/widget-list.html">
+                                Contact us
+                            </a>
+                            <a href="page-edit.html">
+                                <span class="pull-right glyphicon glyphicon-cog"></span>
                             </a>
                         </li>
 
@@ -73,23 +93,25 @@
 
             <div class="col-xs-12 col-sm-8 pull-right rz-split-view-right">
 
-                <label for="name">Website Name</label>
-                <input name="name"
+                <label for="page-name">Page Name</label>
+                <input name="page-name"
+                       type="text"
                        class="form-control"
-                       id="Name"
-                       placeholder="Blogger"/>
+                       id="page-name"
+                       value="Blog post 1"
+                       placeholder="Page Name"/>
 
-                <label for="description">Website Discription</label>
-                <textarea name="description"
-                          type="email"
-                          class="form-control"
-                          rows="5"
-                          id="description"
-                          placeholder="Blogger Discription"></textarea>
+                <label for="page-title">Title</label>
+                <input name="page-title"
+                       type="text"
+                       class="form-control"
+                       id="page-title"
+                       value="Blog post"
+                       placeholder="Page Title"/>
 
 
                 <a class="btn btn-default btn-block btn-danger"
-                   href="website-list.html"
+                   href="../website/website-list.html"
                    role="button">Delete</a>
 
             </div>
@@ -100,7 +122,7 @@
 
     <nav class="navbar navbar-default navbar-fixed-bottom">
         <div class="container-fluid">
-            <a class="navbar-brand rz-navbar-right-icon" href="user/profile.html">
+            <a class="navbar-brand rz-navbar-right-icon" href="../user/profile.html">
                 <span class="glyphicon glyphicon-user"></span>
             </a>
         </div><!-- /.container-fluid -->

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-    <link href="../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="css/style.css" rel="stylesheet"/>
+    <link href="../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/style.css" rel="stylesheet"/>
 
 </head>
 
 <body>
 
-<div class="rz rz-profile">
+<div class="rz rz-user">
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -23,54 +23,56 @@
 
 
             </div>
+        </div>
     </nav>
 
 
     <div class="container-fluid">
 
 
-        <label for="username"> Username</label>
-        <input name="username"
+        <label for="profile-username"> Username</label>
+        <input name="profile-username"
                readonly
                class="form-control"
                value="zhengrui"
-               id="username"
+               type="text"
+               id="profile-username"
                placeholder="zhengrui"/>
 
-        <label for="email"> Email</label>
-        <input name="lastname"
+        <label for="profile-email"> Email</label>
+        <input name="profile-email"
                type="email"
                class="form-control"
-               id="email"
+               id="profile-email"
                placeholder="zheng.rui@husky.neu.edu"/>
 
-        <label for="firstname"> First name</label>
-        <input name="firstname"
+        <label for="profile-firstname"> First name</label>
+        <input name="profile-firstname"
                class="form-control"
-               id="firstname"
+               id="profile-firstname"
                value="Rui"
                placeholder="Rui"/>
 
-        <label for="lastname"> Last name</label>
-        <input name="lastname"
+        <label for="profile-lastname"> Last name</label>
+        <input name="profile-lastname"
                class="form-control"
-               id="lastname"
+               id="profile-lastname"
                value="Zheng"
                placeholder="Zheng"/>
 
-        <label for="dateOfBirth"> Date of birth</label>
-        <input name="lastname"
+        <label for="profile-date-of-birth"> Date of birth</label>
+        <input name="profile-date-of-birth"
                class="form-control"
-               id="dateOfBirth"
+               id="profile-date-of-birth"
                type="date"
                placeholder="1995-03-05"/>
 
 
         <a class="btn btn-default btn-block btn-primary"
-           href="website-list.html"
+           href="../website/website-list.html"
            role="button">Websites</a>
         <a class="btn btn-default btn-block btn-danger"
-           href="Login.html"
+           href="login.html"
            role="button">Logout</a>
     </div>
 
