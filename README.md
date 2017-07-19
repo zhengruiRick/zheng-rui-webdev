@@ -10,10 +10,10 @@
 
   https://zheng-rui-webdev.herokuapp.com
 
-- Link to Projest:
+- Link to Project:
 
   N/A
 
 - Link to assignment
 
-  N/A
+  https://zheng-rui-webdev.herokuapp.com/assignment/
