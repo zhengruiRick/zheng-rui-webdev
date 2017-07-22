@@ -1,23 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Register</title>
-    <link href="../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="../css/style.css" rel="stylesheet"/>
-
-</head>
-
-<body>
-
-<div class="rz rz-user">
+<div class="rz rz-user" ng-controller="profileController">
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="container-fluid">
 
                 <a class="navbar-brand" href="#">Profile</a>
-                <a class="navbar-brand rz-navbar-right-icon" href="profile.html">
+                <a class="navbar-brand rz-navbar-right-icon" href="#!profile/123">
                     <span class="glyphicon glyphicon-ok"></span>
                 </a>
 
@@ -30,14 +18,17 @@
     <div class="container-fluid">
 
 
-        <label for="profile-username"> Username</label>
-        <input name="profile-username"
+        <h2>Welcome back, {{user.firstName}}!</h2>
+
+
+        <label for="username"> Username</label>
+        <input name="username"
                readonly
                class="form-control"
                value="zhengrui"
                type="text"
-               id="profile-username"
-               placeholder="zhengrui"/>
+               id="username"
+               ng-model="user.username"/>
 
         <label for="profile-email"> Email</label>
         <input name="profile-email"
@@ -46,19 +37,17 @@
                id="profile-email"
                placeholder="zheng.rui@husky.neu.edu"/>
 
-        <label for="profile-firstname"> First name</label>
-        <input name="profile-firstname"
+        <label for="firstname"> First name</label>
+        <input name="firstname"
+               ng-model="user.firstName"
                class="form-control"
-               id="profile-firstname"
-               value="Rui"
-               placeholder="Rui"/>
+               id="firstname"/>
 
-        <label for="profile-lastname"> Last name</label>
-        <input name="profile-lastname"
+        <label for="lastname"> Last name</label>
+        <input name="lastname"
                class="form-control"
-               id="profile-lastname"
-               value="Zheng"
-               placeholder="Zheng"/>
+               id="lastname"
+               ng-model="user.lastName"/>
 
         <label for="profile-date-of-birth"> Date of birth</label>
         <input name="profile-date-of-birth"
@@ -69,22 +58,18 @@
 
 
         <a class="btn btn-default btn-block btn-primary"
-           href="../website/website-list.html"
+           href="../../website/website-list.html"
            role="button">Websites</a>
         <a class="btn btn-default btn-block btn-danger"
-           href="login.html"
+           href="#!profile/123"
            role="button">Logout</a>
     </div>
 
     <nav class="navbar navbar-default navbar-fixed-bottom">
-        <a class="navbar-brand rz-navbar-right-icon" href="profile.html">
+        <a class="navbar-brand rz-navbar-right-icon" href="profile.view.client.html">
             <span class="glyphicon glyphicon-user"></span>
         </a>
     </nav>
 
 
 </div>
-
-
-</body>
-</html>
