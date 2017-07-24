@@ -3,14 +3,14 @@
 
 <div class="container-fluid rz rz-user">
 
-    <div ng-controller="loginController">
+    <div>
 
-        <div ng-show="welcomeUser" class="alert alert-info">
+        <div ng-show="model.welcomeUser" class="alert alert-info">
             Welcome back {{welcomeUser.firstName}}
         </div>
 
-        <div ng-show="errorMessage" class="alert alert-danger">
-            {{errorMessage}}
+        <div ng-show="model.errorMessage" class="alert alert-danger">
+            {{model.errorMessage}}
         </div>
 
 
@@ -18,7 +18,7 @@
 
         <label for="username"> Username</label>
         <input name="username"
-               ng-model="user.username"
+               ng-model="model.user.username"
                type="text"
                class="form-control"
                id="username"
@@ -26,14 +26,14 @@
 
         <label for="password"> Password</label>
         <input name="password"
-               ng-model="user.password"
+               ng-model="model.user.password"
                type="password"
                class="form-control"
                id="password"
                placeholder="password"/>
 
         <a class="btn btn-default btn-block btn-primary"
-           ng-click="login(user)"
+           ng-click="model.login(model.user)"
            role="button">Login</a>
 
         <a class="btn btn-default btn-block btn-success"

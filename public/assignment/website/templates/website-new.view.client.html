@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Website new</title>
-    <link href="../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="../css/style.css" rel="stylesheet"/>
-
-</head>
-
-<body>
-
 <div class="rz rz-website-new">
 
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -17,11 +5,11 @@
             <div class="container-fluid">
 
 
-                <a class="navbar-brand" href="website-list.html">
+                <a class="navbar-brand" href="website-list.view.client.html">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
                 <a class="navbar-brand" href="#">New Websites</a>
-                <a class="navbar-brand rz-navbar-right-icon" href="website-list.html">
+                <a class="navbar-brand rz-navbar-right-icon" href="website-list.view.client.html">
                     <span class="glyphicon glyphicon-ok"></span>
                 </a>
 
@@ -40,28 +28,28 @@
 
                         <li class="list-group-item">
                             Address Book App
-                            <a href="website-edit.html">
+                            <a href="website-edit.view.client.html">
                                 <span class="pull-right glyphicon glyphicon-cog"> </span>
                             </a>
                         </li>
 
                         <li class="list-group-item">
                             Blogger
-                            <a href="website-edit.html">
+                            <a href="website-edit.view.client.html">
                                 <span class="pull-right glyphicon glyphicon-cog"> </span>
                             </a>
                         </li>
 
                         <li class="list-group-item">
                             Blogger App
-                            <a href="website-edit.html">
+                            <a href="website-edit.view.client.html">
                                 <span class="pull-right glyphicon glyphicon-cog"> </span>
                             </a>
                         </li>
 
                         <li class="list-group-item">
                             Script App
-                            <a href="website-edit.html">
+                            <a href="website-edit.view.client.html">
                                 <span class="pull-right glyphicon glyphicon-cog"> </span>
                             </a>
                         </li>
@@ -73,10 +61,10 @@
 
             <div class="col-xs-12 col-sm-8 pull-right rz-split-view-right">
 
-                <label for="website-name"> Name</label>
+                <label for="name"> Name</label>
                 <input name="website-name"
                        class="form-control"
-                       id="Name"
+                       id="name"
                        type="text"
                        placeholder="Name"/>
 
@@ -90,7 +78,7 @@
 
 
                 <a class="btn btn-default btn-block btn-danger"
-                   href="website-list.html"
+                   href="website-list.view.client.html"
                    role="button">Cancel</a>
 
             </div>
@@ -100,13 +88,9 @@
     </div>
 
     <nav class="navbar navbar-default navbar-fixed-bottom">
-        <a class="navbar-brand rz-navbar-right-icon" href="../user/templates/profile.view.client.html">
+        <a class="navbar-brand rz-navbar-right-icon" href="#!/user/{{userId}}">
             <span class="glyphicon glyphicon-user"></span>
         </a>
     </nav>
 
 </div>
-
-
-</body>
-</html>

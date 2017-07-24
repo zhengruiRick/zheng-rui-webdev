@@ -1,11 +1,11 @@
-<div class="rz rz-user" ng-controller="profileController">
+<div class="rz rz-user">
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="container-fluid">
 
                 <a class="navbar-brand" href="#">Profile</a>
-                <a class="navbar-brand rz-navbar-right-icon" href="#!profile/123">
+                <a class="navbar-brand rz-navbar-right-icon" ng-click="model.updateUser(model.user)">
                     <span class="glyphicon glyphicon-ok"></span>
                 </a>
 
@@ -18,7 +18,10 @@
     <div class="container-fluid">
 
 
-        <h2>Welcome back, {{user.firstName}}!</h2>
+        <h2>Welcome back, {{model.user.firstName}}!</h2>
+        <div ng-show="model.updateMessage" class="alert alert-info">
+            {{model.updateMessage}}
+        </div>
 
 
         <label for="username"> Username</label>
@@ -28,7 +31,7 @@
                value="zhengrui"
                type="text"
                id="username"
-               ng-model="user.username"/>
+               ng-model="model.user.username"/>
 
         <label for="profile-email"> Email</label>
         <input name="profile-email"
@@ -39,7 +42,7 @@
 
         <label for="firstname"> First name</label>
         <input name="firstname"
-               ng-model="user.firstName"
+               ng-model="model.user.firstName"
                class="form-control"
                id="firstname"/>
 
@@ -47,7 +50,7 @@
         <input name="lastname"
                class="form-control"
                id="lastname"
-               ng-model="user.lastName"/>
+               ng-model="model.user.lastName"/>
 
         <label for="profile-date-of-birth"> Date of birth</label>
         <input name="profile-date-of-birth"
@@ -58,15 +61,22 @@
 
 
         <a class="btn btn-default btn-block btn-primary"
-           href="../../website/website-list.html"
+           href="#!/user/{{model.user._id}}/website"
            role="button">Websites</a>
+
+        <a class="btn btn-default btn-block"
+           ng-click ="model.updateUser(model.user)"
+           role="button">Update User</a>
+
         <a class="btn btn-default btn-block btn-danger"
-           href="#!profile/123"
+           href="#!login"
            role="button">Logout</a>
+
+
     </div>
 
     <nav class="navbar navbar-default navbar-fixed-bottom">
-        <a class="navbar-brand rz-navbar-right-icon" href="profile.view.client.html">
+        <a class="navbar-brand rz-navbar-right-icon" ng-click="model.login(model.user)">
             <span class="glyphicon glyphicon-user"></span>
         </a>
     </nav>

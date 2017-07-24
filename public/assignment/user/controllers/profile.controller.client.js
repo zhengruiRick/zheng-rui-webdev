@@ -5,21 +5,29 @@
         .controller("profileController", profileController);
 
 
-//json = Javaspript Object Notation
-    var users = [
-        {_id: "123", username: "alice",    password: "alice",    firstName: "Alice",  lastName: "Wonder"  },
-        {_id: "234", username: "bob",      password: "bob",      firstName: "Bob",    lastName: "Marley"  },
-        {_id: "345", username: "charly",   password: "charly",   firstName: "Charly", lastName: "Garcia"  },
-        {_id: "456", username: "jannunzi", password: "jannunzi", firstName: "Jose",   lastName: "Annunzi" }
-    ]
 
-    function profileController($scope, $routeParams) {
+    function profileController($routeParams, userService) {
+        var model = this;
         var userId = $routeParams["userId"];
-        for(var u in users) {
-            if(users[u]._id === userId) {
-                $scope.user = users[u];
-            }
+
+        model.updateUser = updateUser;
+        model.unregister = unregister;
+
+        function init() {
+            model.user = userService.findUserById(userId);
         }
+        init();
+
+        function updateUser(user) {
+            userService.updateUser(model.user._id, user);
+            model.updateMessage= "User profile update successfully"
+        }
+
+        function unregister() {
+
+        }
+
+
     }
 
 

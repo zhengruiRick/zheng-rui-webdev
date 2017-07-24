@@ -5,30 +5,28 @@
         .controller("loginController", loginController);
 
 
-//json = Javaspript Object Notation
-    var users = [
-        {_id: "123", username: "alice",    password: "alice",    firstName: "Alice",  lastName: "Wonder"  },
-        {_id: "234", username: "bob",      password: "bob",      firstName: "Bob",    lastName: "Marley"  },
-        {_id: "345", username: "charly",   password: "charly",   firstName: "Charly", lastName: "Garcia"  },
-        {_id: "456", username: "jannunzi", password: "jannunzi", firstName: "Jose",   lastName: "Annunzi" }
-    ]
 
-    function loginController($scope, $location) {
+    function loginController($location, userService) {
+        var model = this;
 
+        model.login = login;
 
-
-        $scope.login = function (user) {
-            for(var u in users) {
-                var _user = users[u];
-                if(_user.username ===user.username && _user.password === user.password){
-                    $scope.welcomeUser = _user;
-                    $location.url("profile/"+ _user._id);
-                }
-
-            }
-            $scope.errorMessage= "Login information incorrect, please try again!"
+        function init() {
 
         }
+        init();
+
+        function login(user) {
+            var user = userService.findUserByUsernameAndPassword(user.username, user.password);
+            if (user === null) {
+                model.errorMessage= "Login information incorrect, please try again!"
+            }
+            else {
+                model.welcomeUser = user;
+                $location.url("profile/"+ user._id);
+            }
+        }
+
 
     }
 

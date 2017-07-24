@@ -1,0 +1,46 @@
+<div class="rz rz-website">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+
+
+            <a class="navbar-brand" ng-click="model.(model.user)">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="navbar-brand" href="#">Websites</a>
+            <a class="navbar-brand rz-navbar-right-icon" href="#!/user/{{model.userId}}/website/new">
+                <span class="glyphicon glyphicon-plus"></span>
+            </a>
+
+
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+
+
+        <ul class="list-group">
+            <li ng-repeat="website in model.websites" class="list-group-item">
+
+                <a href="../../page/page-list.html">
+                    {{website.name}}
+                </a>
+
+                <a href="website-edit.view.client.html">
+                    <span class="pull-right glyphicon glyphicon-cog"> </span>
+                </a>
+
+            </li>
+
+        </ul>
+
+
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <a class="navbar-brand rz-navbar-right-icon" href="#!/profile/{{model.userId}}">
+            <span class="glyphicon glyphicon-user"></span>
+        </a>
+    </nav>
+</div>
