@@ -29,16 +29,17 @@
                     function deleteWebsite(websiteId) {
                         websiteService.deleteWebsite(websiteId);
                         $location.url("/user/"+model.userId+"/website");
+                    }
 
-        }
-
-        function updateWebsite(website) {
-            websiteService.updateWebsite(model.websiteId, website);
-            model.updateMessage= "Website update successfully";
-        }
+                    function updateWebsite(website) {
+                        websiteService.updateWebsite(model.websiteId, website);
+                        model.updateMessage= "Website update successfully";
+                    }
 
 
-    }
+
+
+                }
 
 
 })();

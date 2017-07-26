@@ -4,7 +4,8 @@
         <div class="container-fluid">
 
 
-            <a class="navbar-brand" href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget">
+            <a class="navbar-brand"
+               href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget">
                 <span class="glyphicon glyphicon-chevron-left"></span>
             </a>
             <a class="navbar-brand" href="#">Widgets</a>
@@ -14,38 +15,14 @@
 
 
     <div class="container-fluid">
-        <ul class="list-group">
 
-            <li class="list-group-item">
-                <a ng-click="model.editorUrl(heading)">
-                    Header
-                </a>
-            </li>
-
-
-
-            <li class="list-group-item">
-                <a href="model.editorUrl('image')">
-                    Image
-                </a>
-            </li>
-
-            <li class="list-group-item">
-                <a href="model.editorUrl('youtube')">
-                    Youtube
-                </a>
-            </li>
-
-
-
-
-        </ul>
+        <div ng-include="'views/widget/templates/widget-chooser.component.html'"></div>
 
 
     </div>
 
     <nav class="navbar navbar-default navbar-fixed-bottom">
-        <a class="navbar-brand rz-navbar-right-icon" href="../../user/templates/profile.view.client.html">
+        <a class="navbar-brand rz-navbar-right-icon" href="#!/profile/{{model.userId}}">
             <span class="glyphicon glyphicon-user"></span>
         </a>
     </nav>

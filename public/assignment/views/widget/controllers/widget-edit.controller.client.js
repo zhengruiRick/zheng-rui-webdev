@@ -1,42 +1,49 @@
 (function () {
     angular
         .module("WamApp")
-        .controller("widgetController", widgeController);
+        .controller("widgetEditController", widgetEditController);
 
 
-    function widgetListController($sce,$routeParams,widgetService) {
+    function widgetEditController($routeParams,widgetService,$location) {
         var model = this;
 
         model.userId = $routeParams.userId;
         model.websiteId = $routeParams.websiteId;
         model.pageId = $routeParams.pageId;
+        model.widgetId = $routeParams.widgetId;
 
-        model.trustHtmlContent = trustHtmlContent;
-        model.trustUrlResource = trustUrlResource;
-        model.getWidgetIncludeUrl = getWidgetIncludeUrl;
+        model.getRightWidgetTypeUrl = getRightWidgetTypeUrl;
+        model.deleteWidget = deleteWidget;
+        model.updateWidget = updateWidget;
+
+
 
 
         function init() {
             model.widgets = widgetService.findWidgetByPageId(model.pageId);
+            model.widget =widgetService.findWidgetById(model.widgetId);
 
         }
         init();
 
-        function trustHtmlContent(html) {
-            return $sce.trustAsHtml(html);
-        }
-
-        function trustUrlResource(url) {
-            var youtubeUrl = 'https://www.youtube.com/embed/';
-            var urlParts =  url.split("/");
-            youtubeUrl += urlParts[urlParts.length-1];
-            return $sce.trustAsResourceUrl(youtubeUrl);
+        function getRightWidgetTypeUrl(widgetType) {
+            return "views/widget/templates/editors/widget-"+ widgetType + "-edit.view.client.html"
 
         }
 
-        function getWidgetIncludeUrl(widgetType) {
-            return "views/widget/templates/widgets/widget-"+ widgetType+".view.client.html";
+        function deleteWidget(widgetId) {
+            widgetService.deleteWidget(widgetId);
+            $location.url("/user/"+model.userId+"/website/"+model.websiteId+"/page/"+model.pageId+"/widget");
         }
+
+        function updateWidget(widget) {
+            widgetService.updateWidget(model.widgetId, widget);
+            model.updateMessage= "Website update successfully";
     }
+
+
+
+
+}
 
 })();

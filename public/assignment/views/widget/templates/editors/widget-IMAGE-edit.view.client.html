@@ -1,30 +1,34 @@
+
 <div>
 
-    <label for="widget-image-name">Name</label>
-    <input name="widget-image-name"
+    <label for="name">Name</label>
+    <input name="name"
            class="form-control"
-           id="widget-image-name"
+           id="name"
+           ng-model="model.widget._id"
            placeholder="Widget name"/></input>
 
-    <label for="widget-image-text">Text</label>
-    <input name="widget-image-text"
+    <label for="text">Text</label>
+    <input name="text"
            class="form-control"
-           id="widget-image-text"
+           id="text"
+           ng-model="model.widget.text"
            placeholder="Enter Widget Text Here"></input>
 
-    <label for="widget-image-url">URL</label>
-    <input name="widget-image-url"
+    <label for="url">URL</label>
+    <input name="url"
            class="form-control"
-           id="widget-image-url"
+           id="url"
            type="url"
+           ng-model="model.widget.url"
            placeholder="Enter Image URL Here"></input>
 
     <label for="widget-image-width">Width</label>
     <input name="widget-image-width"
            class="form-control"
            id="widget-image-width"
-           type="number"
-           placeholder="Enter % Here, Only number please"></input>
+           ng-model="model.widget.width"
+           placeholder="Enter Image Width here, ending with %"></input>
 
     <label for="widget-image-upload">Upload</label>
     <input name="widget-image-upload"

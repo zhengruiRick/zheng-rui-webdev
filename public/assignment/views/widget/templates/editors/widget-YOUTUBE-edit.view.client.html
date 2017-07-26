@@ -4,6 +4,7 @@
     <input name="name"
            class="form-control"
            id="name"
+           ng-model="model.widget.name"
            placeholder="Enter Widget Name Here"/></input>
 
     <label for="text">Text</label>
@@ -17,13 +18,14 @@
            class="form-control"
            id="url"
            type="url"
+           ng-model="model.widget.url"
            placeholder="Enter Youtube URL Here"></input>
 
     <label for="width">Width</label>
     <input name="width"
            class="form-control"
            id="width"
-           type="number"
+           ng-model="model.widget.width"
            placeholder="Enter Width Here"></input>
 
 </div>

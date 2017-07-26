@@ -50,27 +50,27 @@
         }
 
         function deleteWidget(widgetId) {
-            var widget = findWidgetById(pageId);
+            var widget = findWidgetById(widgetId);
             var index = widgets.indexOf(widget);
-            widget.splice(index,1);
+            widgets.splice(index,1);
 
         }
 
         function updateWidget(widgetId, widget) {
             for (var w in widgets) {
-                if (widgets[p]._id === widgetId) {
-                    widgets[p] = widget;
+                if (widgets[w]._id === widgetId) {
+                    widgets[w] = widget;
                     return;
                 }
             }
             return null;
         }
 
-        function createWidget(pageId, widget) {
-            widget._id = null;
+        function createWidget(pageId, widget, type) {
 
-            widget._id =  (new Date()).getTime() + "123";
+            widget._id =  (new Date()).getTime() + "456";
             widget.pageId = pageId;
+            widget.widgetType = type;
             widgets.push(widget);
             return widget;
 

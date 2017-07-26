@@ -3,33 +3,44 @@
         .module("WamApp")
         .controller("widgetNewController", widgetNewController);
 
-    function pageNewController($routeParams, widgetService,$location) {
-        var model = this;
 
+    function widgetNewController($routeParams,widgetService,$location) {
+        var model = this;
 
         model.userId = $routeParams.userId;
         model.websiteId = $routeParams.websiteId;
         model.pageId = $routeParams.pageId;
+        model.widgetId = $routeParams.widgetId;
+        model.widgetType = $routeParams.widgetType;
 
-
-
+        model.getRightNewWidgetTypeUrl = getRightNewWidgetTypeUrl;
         model.createWidget = createWidget;
-        model.editorUrl = editorUrl;
+
+
+
 
 
         function init() {
-            model.pages = pageService.findPageByWebsiteId(model.websiteId);
+            model.widgets = widgetService.findWidgetByPageId(model.pageId);
+            model.widget =widgetService.findWidgetById(model.widgetId);
 
         }
         init();
 
-        function createWidget(Widget) {
-            var page = widgetService.createPage(model.websiteId,page);
+        function getRightNewWidgetTypeUrl() {
+            return "views/widget/templates/editors/widget-"+ model.widgetType + "-edit.view.client.html"
+
+        }
+
+        function createWidget(widget, type) {
+            var page = widgetService.createWidget(model.pageId,widget,type);
             $location.url("user/"+ model.userId+"/website/"+model.websiteId+"/page/"+model.pageId+"/widget");
         }
-        function editorUrl(widgetType) {
-            return "views/widget/templates/widget-"+ widgetType+".view.client.html"
-        }
-    }
+
+
+
+
+
+}
 
 })();

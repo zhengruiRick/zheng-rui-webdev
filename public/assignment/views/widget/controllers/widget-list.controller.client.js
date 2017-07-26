@@ -10,6 +10,7 @@
         model.userId = $routeParams.userId;
         model.websiteId = $routeParams.websiteId;
         model.pageId = $routeParams.pageId;
+        model.widgetId = $routeParams.widgetId;
 
         model.trustHtmlContent = trustHtmlContent;
         model.trustUrlResource = trustUrlResource;

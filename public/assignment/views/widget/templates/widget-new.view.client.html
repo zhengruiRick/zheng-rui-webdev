@@ -1,0 +1,58 @@
+<div class="rz rz-widget">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand"
+               href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget/new">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="navbar-brand">New Wigdet</a>
+            <a class="navbar-brand rz-navbar-right-icon"
+               ng-click="model.createWidget(model.widget)">
+                <span class="glyphicon glyphicon-ok"></span>
+            </a>
+
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 hidden-xs rz-split-view-left">
+
+                <div class="container-fluid">
+                    <div ng-include="'views/widget/templates/widget-chooser.component.html'"></div>
+                </div>
+            </div>
+
+
+            <div class="col-xs-12 col-sm-8 pull-right rz-split-view-right">
+
+
+
+                <div ng-switch="model.widget.widgetType">
+                    <div ng-include="model.getRightNewWidgetTypeUrl(model.widget.widgetType)"></div>
+
+                </div>
+
+
+                <a class="btn btn-default btn-block btn-danger"
+                   ng-click="model.deleteWidget(model.widgetId)"
+                   role="button">Cancel</a>
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <a class="navbar-brand rz-navbar-right-icon" href="#!/profile/{{model.userId}}">
+            <span class="glyphicon glyphicon-user"></span>
+        </a>
+    </nav>
+
+</div>
