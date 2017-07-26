@@ -1,0 +1,68 @@
+<div class="rz rz-website-new">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#!/user/{{model.website.developerId}}/website">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="navbar-brand" href="#">Edit Website</a>
+            <a class="navbar-brand rz-navbar-right-icon" ng-click="model.updateWebsite(model.website)">
+                <span class="glyphicon glyphicon-ok"></span>
+            </a>
+
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 hidden-xs rz-split-view-left">
+
+                <div ng-include="'views/website/templates/website-list.component.html'"></div>
+
+            </div>
+
+
+            <div class="col-xs-12 col-sm-8 pull-right rz-split-view-right">
+
+                <div ng-show="model.updateMessage" class="alert alert-info">
+                    {{model.updateMessage}}
+                </div>
+
+
+                <label for="name">Website Name</label>
+                <input name="name"
+                       class="form-control"
+                       id="name"
+                       type="text"
+                       ng-model="model.website.name"
+                       placeholder="Enter the website name here"/>
+
+                <label for="description">Website Discription</label>
+                <textarea name="website-description"
+                          type="email"
+                          class="form-control"
+                          rows="5"
+                          id="description"
+                          ng-model = "model.website.description"
+                          placeholder="Enter the website description here"></textarea>
+
+
+                <a class="btn btn-default btn-block btn-danger"
+                   ng-click="model.deleteWebsite(model.website._id)"
+                   role="button">Delete</a>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <a class="navbar-brand rz-navbar-right-icon" href="../../user/templates/profile.view.client.html">
+            <span class="glyphicon glyphicon-user"></span>
+        </a>
+    </nav>
+
+</div>

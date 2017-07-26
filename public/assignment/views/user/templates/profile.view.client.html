@@ -1,0 +1,98 @@
+<div class="rz rz-user">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="#">Profile</a>
+                <a class="navbar-brand rz-navbar-right-icon" ng-click="model.updateUser(model.user)">
+                    <span class="glyphicon glyphicon-ok"></span>
+                </a>
+
+
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+
+
+        <h2>Welcome back, {{model.user.firstName}}!</h2>
+        <div ng-show="model.updateMessage" class="alert alert-info">
+            {{model.updateMessage}}
+        </div>
+
+        <div ng-show="model.deleteMessage" class="alert alert-info">
+            {{model.deleteMessage}}
+        </div>
+
+
+        <label for="username"> Username</label>
+        <input name="username"
+               readonly
+               class="form-control"
+               value="zhengrui"
+               type="text"
+               id="username"
+               ng-model="model.user.username"/>
+
+        <label for="profile-email"> Email</label>
+        <input name="profile-email"
+               type="email"
+               class="form-control"
+               id="profile-email"
+               placeholder="zheng.rui@husky.neu.edu"/>
+
+        <label for="firstname"> First name</label>
+        <input name="firstname"
+               ng-model="model.user.firstName"
+               class="form-control"
+               id="firstname"/>
+
+        <label for="lastname"> Last name</label>
+        <input name="lastname"
+               class="form-control"
+               id="lastname"
+               ng-model="model.user.lastName"/>
+
+        <label for="profile-date-of-birth"> Date of birth</label>
+        <input name="profile-date-of-birth"
+               class="form-control"
+               id="profile-date-of-birth"
+               type="date"
+               placeholder="1995-03-05"/>
+
+
+        <a class="btn btn-default btn-block btn-primary"
+           href="#!/user/{{model.user._id}}/website"
+           role="button">Websites</a>
+
+        <a class="btn btn-default btn-block"
+           ng-click ="model.updateUser(model.user)"
+           role="button">Update User</a>
+
+        <a class="btn btn-default btn-block btn-info"
+           href="#!login"
+           role="button">Logout</a>
+
+        <a class="btn btn-default btn-block btn-danger"
+           ng-click ="model.deleteUser(model.user._id)"
+           role="button">Delete User</a>
+
+
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <a ng-show="model.deleteMessage" class="navbar-brand rz-navbar-right-icon" href="#!/login">
+            <span class="glyphicon glyphicon-user"></span>
+        </a>
+
+        <a ng-show="!model.deleteMessage" class="navbar-brand rz-navbar-right-icon" href="#!/profile/{{model.user._id}}">
+            <span class="glyphicon glyphicon-user"></span>
+        </a>
+
+    </nav>
+
+
+</div>
