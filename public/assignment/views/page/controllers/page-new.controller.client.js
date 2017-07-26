@@ -3,7 +3,7 @@
         .module("WamApp")
         .controller("pageNewController", pageNewController);
 
-    function pageNewController($routeParams, pageService,$location) {
+    function pageNewController($routeParams, pageService,websiteService,$location) {
         var model = this;
 
         model.websiteId = $routeParams.websiteId;

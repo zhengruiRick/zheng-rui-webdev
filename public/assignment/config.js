@@ -78,6 +78,12 @@
                 controllerAs: "model"
             })
 
+            .when("/user/:userId/website/:websiteId/page/:pageId/widget/new", {
+                templateUrl: "views/widget/templates/widget-chooser.view.client.html",
+                controller: "widgetListController",
+                controllerAs: "model"
+            })
+
     }
 
 
