@@ -1,0 +1,87 @@
+<div class="rz rz-page">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="container-fluid">
+
+
+                <a class="navbar-brand" href="page-list.view.client.html">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="navbar-brand" href="#">Edit Page</a>
+                <a class="navbar-brand rz-navbar-right-icon" ng-click="model.updatePage(model.page)">
+                    <span class="glyphicon glyphicon-ok"></span>
+                </a>
+            </div>
+
+
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 hidden-xs rz-split-view-left">
+
+                <div class="container-fluid">
+                    <ul class="list-group">
+                        <li ng-repeat="page in model.pages" class="list-group-item">
+
+                            <a href="../../widget/templates/widget-list.view.client.html">
+                                {{page.name}}
+                            </a>
+                            <a href="page-edit.view.client.html">
+                                <span class="pull-right glyphicon glyphicon-cog"> </span>
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+
+
+            <div class="col-xs-12 col-sm-8 pull-right rz-split-view-right">
+
+                <div ng-show="model.updateMessage" class="alert alert-info">
+                    {{model.updateMessage}}
+                </div>
+
+
+                <label for="name">Page Name</label>
+                <input name="name"
+                       type="text"
+                       class="form-control"
+                       id="name"
+                       ng-model="model.page.name"
+                       placeholder="Page Name"/>
+
+                <label for="page-title">Title</label>
+                <input name="page-title"
+                       type="text"
+                       class="form-control"
+                       id="page-title"
+                       ng-model="model.page.description"
+                       placeholder="Page Title"/>
+
+
+
+                <a class="btn btn-default btn-block btn-danger"
+                   ng-click="model.deletePage(model.page._id)"
+                   role="button">Delete</a>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand rz-navbar-right-icon" href="#!/profile/{{model.userId}}">
+                <span class="glyphicon glyphicon-user"></span>
+            </a>
+        </div><!-- /.container-fluid -->
+    </nav>
+
+</div>
