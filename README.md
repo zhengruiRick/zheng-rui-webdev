@@ -16,6 +16,7 @@
   https://zheng-rui-webdev.herokuapp.com/project/wiki/Project%20Description%20(project1)%20.pdf
 
   1. Design
+  https://zheng-rui-webdev.herokuapp.com/project/wiki/User%20UML.class.violet.html
 
 
 - Link to assignment
