@@ -17,15 +17,20 @@
         init();
 
         function login(user) {
-            var user = userService.findUserByCredentials(user.username, user.password);
-            if (user === null) {
-                model.errorMessage= "Login information incorrect, please try again!"
-            }
-            else {
-                model.welcomeUser = user;
-                $rootScope.currentUser = user;
-                $location.url("profile/"+ user._id);
-            }
+            var promise = userService.findUserByCredentials(user.username, user.password);
+            promise.then(function (res) {
+                user = res.data;
+                if (user === "0") {
+                    model.errorMessage= "Login information incorrect, please try again!"
+                }
+                else {
+                    model.welcomeUser = user;
+                    $rootScope.currentUser = user;
+                    $location.url("profile/"+ user._id);
+                }
+
+            });
+
         }
 
 

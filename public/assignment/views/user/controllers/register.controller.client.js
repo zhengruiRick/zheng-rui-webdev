@@ -16,21 +16,35 @@
         init();
 
         function registerUser(user) {
-            var _user = userService.findUserByUsername(user.username);
-
             if (!(user.password === user.password2)) {
                 model.errorMessage= "The passwords are not match, please try again";
             }
-            else if (!_user) {
-                var user = userService.createUser(user);
-                $location.url("/profile/"+user._id);
-
-            }
             else {
-                model.errorMessage= "The username is already exit, please try another one";
+                var promise = userService.findUserByUsername(user.username);
+                promise
+                    .then(function (response) {
+                        var _user = response.data;
+
+                        if (_user=== "0") {
+                            var promise2 = userService.createUser(user);
+                            promise2
+                                .then(function (res) {
+                                    var _user = res.data;
+                                    $location.url("/profile/"+ _user._id);
+                                });
 
 
+                        }
+                        else {
+                            model.errorMessage= "The username is already exit, please try another one";
+
+
+                        }
+
+                    })
             }
+
+
         }
     }
 

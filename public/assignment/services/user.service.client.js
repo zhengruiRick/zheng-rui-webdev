@@ -3,7 +3,7 @@
         .module("WamApp")
         .factory("userService", userService);
 
-    function userService() {
+    function userService($http) {
         var users = [
             {_id: "123", username: "alice", password: "alice", firstName: "Alice", lastName: "Wonder", isAdmin: true},
             {_id: "234", username: "bob", password: "bob", firstName: "Bob", lastName: "Marley"},
@@ -31,60 +31,46 @@
         }
         
         function updateUser(userId, user) {
-            for (var u in users) {
-                if (users[u]._id === userId) {
-                    users[u] = user;
-                    return;
-                }
-            }
-            return null;
+
+            var url = "/api/user/" + userId;
+
+            $http.put(url, user);
+
             
         }
 
         function findUserById(userId) {
 
-            for (var u in users) {
-                if (users[u]._id === userId) {
-                    return users[u];
-                }
-            }
-            return null;
+            return $http.get("/api/user/"+userId);
         }
 
 
         function findUserByCredentials(username, password) {
 
-            for (var u in users) {
-                var _user = users[u];
-                if (_user.username === username && _user.password === password) {
-                    return _user;
+            var url = "/api/user?username="+username+"&password="+password;
 
-                }
-            }
-            return null;
+            return $http.get(url);
+
+
 
         }
 
         function createUser(user) {
-            user._id = (new Date()).getTime() + "";
 
-            users.push(user);
-            return user;
+            var url = "/api/user";
+
+            return $http.post(url, user);
+
+
 
 
         }
 
         function findUserByUsername(username) {
+            var url = "/api/user?username="+username;
 
-            for (var u in users) {
-                var _user = users[u];
-                if (_user.username === username) {
-                    return users[u];
+            return $http.get(url);
 
-                }
-
-            }
-            return null;
 
         }
 
