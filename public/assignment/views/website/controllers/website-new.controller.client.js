@@ -12,14 +12,22 @@
 
 
         function init() {
-            model.websites = websiteService.findWebsitesByUser(model.userId);
+            websiteService.findWebsitesByUser(model.userId)
+                .then(function (websites) {
+                    model.websites = websites;
+
+                });
 
         }
         init();
 
         function createWebsite(website) {
-            var website = websiteService.createWebsite(model.userId,website);
-            $location.url("user/"+ model.userId+"/website");
+            websiteService
+                .createWebsite(model.userId,website)
+                .then(function () {
+                    $location.url("user/"+ model.userId+"/website");
+                })
+
         }
 
 

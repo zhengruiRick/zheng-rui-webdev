@@ -9,6 +9,7 @@
 
         model.registerUser = registerUser;
 
+        
         function init() {
 
         }
@@ -20,28 +21,20 @@
                 model.errorMessage= "The passwords are not match, please try again";
             }
             else {
-                var promise = userService.findUserByUsername(user.username);
-                promise
+                userService.findUserByUsername(user.username)
                     .then(function (response) {
                         var _user = response.data;
-
                         if (_user=== "0") {
-                            var promise2 = userService.createUser(user);
-                            promise2
-                                .then(function (res) {
-                                    var _user = res.data;
-                                    $location.url("/profile/"+ _user._id);
-                                });
-
-
+                            return userService.createUser(user)
                         }
                         else {
                             model.errorMessage= "The username is already exit, please try another one";
-
-
                         }
-
                     })
+                    .then(function (res) {
+                        var _user = res.data;
+                        $location.url("/profile/"+ _user._id);
+                    });
             }
 
 

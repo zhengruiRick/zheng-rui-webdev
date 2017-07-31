@@ -20,22 +20,35 @@
 
         function init() {
 
-            model.page = pageService.findPageById(model.pageId);
-            model.pages = pageService.findPageByWebsiteId(model.websiteId);
+            pageService.findPageById(model.userId, model.websiteId, model.pageId)
+                .then(function (page) {
+                    model.page = page;
+                })
+
+            pageService.findPageByWebsiteId(model.userId, model.websiteId)
+                .then(function (pages) {
+                    model.pages = pages;
+                })
 
 
         }
         init();
 
         function deletePage(pageId) {
-            pageService.deletePage(pageId);
-            $location.url("/user/"+model.userId+"/website/"+model.websiteId+"/page");
+            pageService.deletePage(model.userId, model.websiteId, pageId)
+                .then(function () {
+                    $location.url("/user/"+model.userId+"/website/"+model.websiteId+"/page");
+                })
+
 
         }
 
         function updatePage(page) {
-            pageService.updatePage(model.pageId, page);
-            model.updateMessage= "Page update successfully";
+            pageService.updatePage(model.userId, model.websiteId,model.pageId, page)
+                .then(function () {
+                    model.updateMessage= "Page update successfully";
+                })
+
         }
 
 

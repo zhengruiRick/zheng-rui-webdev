@@ -17,8 +17,8 @@
         init();
 
         function login(user) {
-            var promise = userService.findUserByCredentials(user.username, user.password);
-            promise.then(function (res) {
+            userService.findUserByCredentials(user.username, user.password)
+                .then(function (res) {
                 user = res.data;
                 if (user === "0") {
                     model.errorMessage= "Login information incorrect, please try again!"

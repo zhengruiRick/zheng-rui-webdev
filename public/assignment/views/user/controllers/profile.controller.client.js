@@ -6,7 +6,7 @@
 
 
 
-    function profileController($routeParams, userService) {
+    function profileController($routeParams, $location, userService) {
         var model = this;
         var userId = $routeParams["userId"];
 
@@ -14,9 +14,8 @@
         model.deleteUser = deleteUser;
 
         function init() {
-            // model.user= userService.findUserById(userId);
-            var promise = userService.findUserById(userId);
-            promise.then(function (response) {
+            userService.findUserById(userId)
+                .then(function (response) {
                 model.user = response.data;
             });
         }
@@ -28,8 +27,12 @@
         }
 
         function deleteUser() {
-            userService.deleteUser(model.user._id);
-            model.deleteMessage= "User removed successfully"
+            userService.deleteUser(model.user._id)
+                .then(function () {
+                    model.deleteMessage= "User removed successfully";
+                    $location.url("/login");
+                })
+
         }
 
 

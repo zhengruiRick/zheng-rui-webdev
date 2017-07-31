@@ -19,21 +19,36 @@
 
                     function init() {
 
-                        model.website = websiteService.findWebsiteById(model.websiteId);
-                        model.websites = websiteService.findWebsitesByUser(model.userId);
+                        websiteService.findWebsiteById(model.userId, model.websiteId)
+                            .then(function (website) {
+                                model.website = website;
+                            })
+                        websiteService.findWebsitesByUser(model.userId)
+                            .then(function (websites) {
+                                model.websites = websites;
+                            })
 
 
                     }
                     init();
 
-                    function deleteWebsite(websiteId) {
-                        websiteService.deleteWebsite(websiteId);
-                        $location.url("/user/"+model.userId+"/website");
+                    function deleteWebsite() {
+                        websiteService
+                            .deleteWebsite(model.userId, model.websiteId)
+                            .then(function () {
+                                $location.url("/user/"+model.userId+"/website");
+                            })
+
+
                     }
 
                     function updateWebsite(website) {
-                        websiteService.updateWebsite(model.websiteId, website);
-                        model.updateMessage= "Website update successfully";
+                        websiteService
+                            .updateWebsite(model.userId,model.websiteId, website)
+                            .then(function () {
+                                model.updateMessage= "Website update successfully";
+                            })
+
                     }
 
 
