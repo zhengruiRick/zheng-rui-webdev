@@ -23,23 +23,25 @@
            ng-model="model.widget.url"
            placeholder="Enter Image URL Here"></input>
 
-    <label for="widget-image-width">Width</label>
-    <input name="widget-image-width"
+    <label for="width">Width</label>
+    <input name="width"
            class="form-control"
-           id="widget-image-width"
+           id="width"
            ng-model="model.widget.width"
            placeholder="Enter Image Width here, ending with %"></input>
 
-    <label for="widget-image-upload">Upload</label>
-    <input name="widget-image-upload"
-           class="form-control"
-           id="widget-image-upload"
-           type="file"
-           placeholder=""></input>
 
-    <a class="btn btn-default btn-block btn-success"
-       href="wigdet-image.html"
-       role="button">Upload Image</a>
+    <label for="image-upload">Image</label>
+    <form action="/api/upload"   method="post" enctype="multipart/form-data" id="image-upload">
+        <input  name="myFile"    type="file" class="form-control"/>
+        <input  name="width"     value="{{model.widget.width}}" style="display: none"/>
+        <input  name="userId"    value="{{model.userId}}"   style="display: none"/>
+        <input  name="websiteId" value="{{model.websiteId}}"   style="display: none"/>
+        <input  name="pageId"    value="{{model.pageId}}"   style="display: none"/>
+        <input  name="widgetId"  value="{{model.widget._id}}"   style="display: none"/>
+        <button type="submit"    class="btn btn-block btn-primary">Upload Image</button>
+    </form>
+
 
 
 </div>

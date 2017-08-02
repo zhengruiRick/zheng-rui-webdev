@@ -21,8 +21,14 @@
 
 
         function init() {
-            model.widgets = widgetService.findWidgetByPageId(model.pageId);
-            model.widget =widgetService.findWidgetById(model.widgetId);
+            widgetService.findWidgetByPageId(model.userId, model.websiteId, model.pageId)
+                .then(function (widgets) {
+                    model.widgets = widgets;
+                });
+            widgetService.findWidgetById(model.userId, model.websiteId, model.pageId, model.widgetId)
+                .then(function (widget) {
+                    model.widget = widget;
+                })
 
         }
         init();
@@ -33,8 +39,11 @@
         }
 
         function createWidget(widget, type) {
-            var page = widgetService.createWidget(model.pageId,widget,type);
-            $location.url("user/"+ model.userId+"/website/"+model.websiteId+"/page/"+model.pageId+"/widget");
+            var page = widgetService.createWidget(model.userId, model.websiteId, model.pageId,widget,type)
+                .then(function () {
+                    $location.url("user/"+ model.userId+"/website/"+model.websiteId+"/page/"+model.pageId+"/widget");
+                })
+
         }
 
 

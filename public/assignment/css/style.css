@@ -11,6 +11,10 @@ body {
     padding-top: 60px;
 }
 
+.btn {
+    margin-bottom: 5px;
+}
+
 
 .rz .navbar-default {
     background-color: #337ab7;
@@ -120,3 +124,4 @@ body {
     border-bottom-left-radius:10px ;
     z-index: 1;
 }
+

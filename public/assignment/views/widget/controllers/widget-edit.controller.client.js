@@ -12,16 +12,24 @@
         model.pageId = $routeParams.pageId;
         model.widgetId = $routeParams.widgetId;
 
-        model.getRightWidgetTypeUrl = getRightWidgetTypeUrl;
+
         model.deleteWidget = deleteWidget;
         model.updateWidget = updateWidget;
+        model.getRightWidgetTypeUrl = null;
 
 
 
 
         function init() {
-            model.widgets = widgetService.findWidgetByPageId(model.pageId);
-            model.widget =widgetService.findWidgetById(model.widgetId);
+            widgetService.findWidgetByPageId(model.userId, model.websiteId, model.pageId)
+                .then(function (widgets) {
+                    model.widgets = widgets;
+                })
+            widgetService.findWidgetById(model.userId, model.websiteId, model.pageId,model.widgetId)
+                .then(function (widget) {
+                    model.widget = widget;
+                    model.getRightWidgetTypeUrl = getRightWidgetTypeUrl;
+                })
 
         }
         init();
@@ -32,15 +40,20 @@
         }
 
         function deleteWidget(widgetId) {
-            widgetService.deleteWidget(widgetId);
-            $location.url("/user/"+model.userId+"/website/"+model.websiteId+"/page/"+model.pageId+"/widget");
+            widgetService.deleteWidget(model.userId, model.websiteId, model.pageId, widgetId)
+                .then(function () {
+                    $location.url("/user/"+model.userId+"/website/"+model.websiteId+"/page/"+model.pageId+"/widget");
+                })
+
         }
 
         function updateWidget(widget) {
-            widgetService.updateWidget(model.widgetId, widget);
-            model.updateMessage= "Website update successfully";
-    }
+            widgetService.updateWidget(model.userId, model.websiteId, model.pageId,model.widgetId, widget)
+                .then(function () {
+                    model.updateMessage= "Website update successfully";
+                })
 
+        }
 
 
 
