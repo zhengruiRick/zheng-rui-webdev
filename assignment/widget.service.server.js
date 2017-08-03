@@ -128,6 +128,6 @@ function createWidget(req, res) {
     widget.pageId = pageId;
     widget.widgetType = type;
     widgets.push(widget);
-    res.json(widget);
+    res.send(widgets);
 }
 

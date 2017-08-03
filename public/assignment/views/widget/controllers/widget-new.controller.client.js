@@ -38,8 +38,8 @@
 
         }
 
-        function createWidget(widget, type) {
-            var page = widgetService.createWidget(model.userId, model.websiteId, model.pageId,widget,type)
+        function createWidget(widget) {
+            var page = widgetService.createWidget(model.userId, model.websiteId, model.pageId,widget,model.widgetType)
                 .then(function () {
                     $location.url("user/"+ model.userId+"/website/"+model.websiteId+"/page/"+model.pageId+"/widget");
                 })
