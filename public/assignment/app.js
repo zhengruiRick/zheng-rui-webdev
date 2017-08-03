@@ -1,6 +1,6 @@
 (function () {
 //iife
     angular
-        .module("WamApp", ["ngRoute"]);
+        .module("WamApp", ["ngRoute","wbdvDirectives"]);
 })();
 

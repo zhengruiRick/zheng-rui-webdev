@@ -8,6 +8,7 @@ app.get("/api/user/:userId/website/:websiteId/page/:pageId/widget/:widgetId", fi
 app.put("/api/user/:userId/website/:websiteId/page/:pageId/widget/:widgetId", updateWidget);
 app.delete("/api/user/:userId/website/:websiteId/page/:pageId/widget/:widgetId", deleteWidget);
 app.post("/api/upload", upload.single('myFile'), uploadImage);
+app.put('/api/page/:pageId/widget', sortWidget);
 
 var widgets = [
     { "_id": "123", "widgetType": "HEADING", "pageId": "321", "size": 2, "text": "GIZMODO"},
@@ -20,6 +21,16 @@ var widgets = [
         "url": "https://youtu.be/AM2Ivdi9c4E" },
     { "_id": "789", "widgetType": "HTML", "pageId": "321", "text": "<p>Lorem ipsum</p>"}
 ];
+
+function sortWidget(req, res) {
+    var initial = req.query.initial;
+    var final = req.query.final;
+
+    var widget = widgets.splice(initial, 1);
+    widgets.splice(final, 0, widget);
+
+    res.send(widgets);
+}
 
 
 

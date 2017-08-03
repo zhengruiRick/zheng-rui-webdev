@@ -15,6 +15,7 @@
         model.trustHtmlContent = trustHtmlContent;
         model.trustUrlResource = trustUrlResource;
         model.getWidgetIncludeUrl = getWidgetIncludeUrl;
+        model.sortWidget = sortWidget;
 
 
         function init() {
@@ -25,6 +26,10 @@
 
         }
         init();
+
+        function sortWidget(initial, final) {
+            widgetService.sortWidget(model.pageId, initial, final);
+        }
 
         function trustHtmlContent(html) {
             return $sce.trustAsHtml(html);

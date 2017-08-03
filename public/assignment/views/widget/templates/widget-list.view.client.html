@@ -20,38 +20,40 @@
 
 
     <div class="container-fluid">
+        <div wbdv-sortable wbdv-sort-call="model.sortWidget(inital, final)">
 
 
-        <div ng-repeat="widget in model.widgets" class="rz-widget-page">
+            <div ng-repeat="widget in model.widgets" class="rz-widget-page">
 
-            <div class="rz-widget-toolbar">
-                <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget/{{widget._id}}">
-                    <span class="glyphicon glyphicon-cog"></span>
-                </a>
-                <span class="glyphicon glyphicon-align-justify"></span>
+                <div class="rz-widget-toolbar">
+                    <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget/{{widget._id}}">
+                        <span class="glyphicon glyphicon-cog"></span>
+                    </a>
+                    <span class="glyphicon glyphicon-align-justify drag-handler"></span>
+                </div>
+
+                <div ng-switch="widget.widgetType">
+                    <div ng-include="model.getWidgetIncludeUrl(widget.widgetType)"></div>
+
+
+                </div>
             </div>
 
-            <div ng-switch="widget.widgetType">
-                <div ng-include="model.getWidgetIncludeUrl(widget.widgetType)"></div>
 
+        </div>
 
-            </div>
+        <nav class="navbar navbar-default navbar-fixed-bottom">
 
+            <a class="navbar-brand" href="javascript:document.location.reload();">
+                <span class="glyphicon glyphicon-refresh"></span>
+            </a>
 
+            <a class="navbar-brand" href="widget-list.view.client.html">
+                <span class="glyphicon glyphicon-eye-open"></span>
+            </a>
+
+            <a class="navbar-brand rz-navbar-right-icon" href="#!/profile/{{model.userId}}">
+                <span class="glyphicon glyphicon-user"></span>
+            </a>
+        </nav>
     </div>
-
-    <nav class="navbar navbar-default navbar-fixed-bottom">
-
-        <a class="navbar-brand" href="javascript:document.location.reload();">
-            <span class="glyphicon glyphicon-refresh"></span>
-        </a>
-
-        <a class="navbar-brand" href="widget-list.view.client.html">
-            <span class="glyphicon glyphicon-eye-open"></span>
-        </a>
-
-        <a class="navbar-brand rz-navbar-right-icon" href="#!/profile/{{model.userId}}">
-            <span class="glyphicon glyphicon-user"></span>
-        </a>
-    </nav>
-</div>
