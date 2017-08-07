@@ -16,7 +16,6 @@
                 },
                 stop: function(event, ui) {
                     final = ui.item.index();
-                    scope.wbdvSortCall(inital, final);
 
                 }
             });

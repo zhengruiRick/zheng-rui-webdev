@@ -33,8 +33,8 @@
         init();
 
 
-        function deleteWidget(widgetId) {
-            widgetService.deleteWidget(model.userId, model.websiteId, model.pageId, widgetId)
+        function deleteWidget() {
+            widgetService.deleteWidget(model.userId, model.websiteId, model.pageId, model.widgetId)
                 .then(function () {
                     $location.url("/user/"+model.userId+"/website/"+model.websiteId+"/page/"+model.pageId+"/widget");
                 })
@@ -44,7 +44,8 @@
         function updateWidget(widget) {
             widgetService.updateWidget(model.userId, model.websiteId, model.pageId,model.widgetId, widget)
                 .then(function () {
-                    model.updateMessage= "Website update successfully";
+                    $location.url("/user/"+model.userId+"/website/"+model.websiteId+"/page/"+
+                        model.pageId+"/widget");
                 })
 
         }
