@@ -54,10 +54,13 @@
                 })
         }
 
-        function createWidget(userId, websiteId, pageId, widget, type) {
+        function createWidget(userId, websiteId, pageId, widget) {
 
-            var url = "/api/user/" + userId + "/website/" + websiteId + "/page/" + pageId +"/widget/new/" + type;
-            return $http.post(url, widget);
+            var url = "/api/user/" + userId + "/website/" + websiteId + "/page/" + pageId +"/widget";
+            return $http.post(url, widget)
+                .then(function (res) {
+                    return res.data;
+                })
 
 
 

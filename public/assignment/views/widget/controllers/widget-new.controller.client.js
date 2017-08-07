@@ -10,43 +10,29 @@
         model.userId = $routeParams.userId;
         model.websiteId = $routeParams.websiteId;
         model.pageId = $routeParams.pageId;
-        model.widgetId = $routeParams.widgetId;
-        model.widgetType = $routeParams.widgetType;
 
-        model.getRightNewWidgetTypeUrl = getRightNewWidgetTypeUrl;
+
         model.createWidget = createWidget;
 
 
 
-
-
         function init() {
-            widgetService.findWidgetByPageId(model.userId, model.websiteId, model.pageId)
-                .then(function (widgets) {
-                    model.widgets = widgets;
-                });
-            widgetService.findWidgetById(model.userId, model.websiteId, model.pageId, model.widgetId)
-                .then(function (widget) {
-                    model.widget = widget;
-                })
+
 
         }
         init();
 
-        function getRightNewWidgetTypeUrl() {
-            return "views/widget/templates/editors/widget-"+ model.widgetType + "-edit.view.client.html"
 
-        }
+        function createWidget(widgetType) {
+            widgetService.createWidget(model.userId, model.websiteId, model.pageId,{widgetType: widgetType})
+                .then(function (widget) {
+                    if (widget) {
+                        $location.url("user/"+ model.userId+"/website/"+model.websiteId+"/page/"+model.pageId+"/widget/"+widget._id);
+                    }
 
-        function createWidget(widget) {
-            var page = widgetService.createWidget(model.userId, model.websiteId, model.pageId,widget,model.widgetType)
-                .then(function () {
-                    $location.url("user/"+ model.userId+"/website/"+model.websiteId+"/page/"+model.pageId+"/widget");
                 })
 
         }
-
-
 
 
 

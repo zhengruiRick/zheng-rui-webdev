@@ -1,5 +1,5 @@
 
-<div>
+<div class="container-fluid">
 
     <label for="name">Name</label>
     <input name="name"
@@ -41,6 +41,10 @@
         <input  name="widgetId"  value="{{model.widget._id}}"   style="display: none"/>
         <button type="submit"    class="btn btn-block btn-primary">Upload Image</button>
     </form>
+
+    <a class="btn btn-block btn-danger"
+       ng-click="model.deleteWidget()"
+       role="button">Delete</a>
 
 
 

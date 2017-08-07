@@ -80,18 +80,13 @@
                 controllerAs: "model"
             })
 
-            .when("/user/:userId/website/:websiteId/page/:pageId/widget/new/:widgetType", {
-                templateUrl: "views/widget/templates/widget-new.view.client.html",
+            .when("/user/:userId/website/:websiteId/page/:pageId/widget/new/", {
+                templateUrl: "views/widget/templates/widget-chooser.view.client.html",
                 controller: "widgetNewController",
                 controllerAs: "model"
             })
 
 
-            .when("/user/:userId/website/:websiteId/page/:pageId/widget/new", {
-                templateUrl: "views/widget/templates/widget-chooser.view.client.html",
-                controller: "widgetChooserController",
-                controllerAs: "model"
-            })
 
 
             .when("/user/:userId/website/:websiteId/page/:pageId/widget/:widgetId", {

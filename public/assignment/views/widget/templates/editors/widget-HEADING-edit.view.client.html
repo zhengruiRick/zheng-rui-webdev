@@ -1,4 +1,4 @@
-<div>
+<div class="container-fluid">
     <label for="name">Name</label>
     <input name="name"
            class="form-control"
@@ -22,6 +22,10 @@
            ng-model="model.widget.size"
            type="number"
            placeholder="Enter Number Here"></input>
+
+    <a class="btn btn-block btn-danger"
+       ng-click="model.deleteWidget()"
+       role="button">Delete</a>
 
 
 </div>

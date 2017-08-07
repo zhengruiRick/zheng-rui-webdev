@@ -15,7 +15,6 @@
 
         model.deleteWidget = deleteWidget;
         model.updateWidget = updateWidget;
-        model.getRightWidgetTypeUrl = null;
 
 
 
@@ -28,16 +27,11 @@
             widgetService.findWidgetById(model.userId, model.websiteId, model.pageId,model.widgetId)
                 .then(function (widget) {
                     model.widget = widget;
-                    model.getRightWidgetTypeUrl = getRightWidgetTypeUrl;
                 })
 
         }
         init();
 
-        function getRightWidgetTypeUrl(widgetType) {
-            return "views/widget/templates/editors/widget-"+ widgetType + "-edit.view.client.html"
-
-        }
 
         function deleteWidget(widgetId) {
             widgetService.deleteWidget(model.userId, model.websiteId, model.pageId, widgetId)

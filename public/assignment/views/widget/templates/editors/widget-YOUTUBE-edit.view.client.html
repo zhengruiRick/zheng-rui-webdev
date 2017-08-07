@@ -1,17 +1,17 @@
-<div>
+<div class="container-fluid">
 
     <label for="name">Name</label>
     <input name="name"
            class="form-control"
            id="name"
            ng-model="model.widget.name"
-           placeholder="Enter Widget Name Here"/></input>
+           placeholder="Enter Widget Name Here"/>
 
     <label for="text">Text</label>
     <input name="text"
            class="form-control"
            id="text"
-           placeholder="Enter Widget Text Here"></input>
+           placeholder="Enter Widget Text Here"/>
 
     <label for="url">URL</label>
     <input name="url"
@@ -19,13 +19,17 @@
            id="url"
            type="url"
            ng-model="model.widget.url"
-           placeholder="Enter Youtube URL Here"></input>
+           placeholder="Enter Youtube URL Here"/>
 
     <label for="width">Width</label>
     <input name="width"
            class="form-control"
            id="width"
            ng-model="model.widget.width"
-           placeholder="Enter Width Here"></input>
+           placeholder="Enter Width Here"/>
+
+    <a class="btn btn-block btn-danger"
+       ng-click="model.deleteWidget()"
+       role="button">Delete</a>
 
 </div>

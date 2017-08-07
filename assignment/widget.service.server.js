@@ -3,7 +3,7 @@ var multer = require('multer'); // npm install multer --save
 var upload = multer({ dest: __dirname+'/../public/assignment/uploads' });
 
 app.get("/api/user/:userId/website/:websiteId/page/:pageId/widget", findWidgetByPageId);
-app.post("/api/user/:userId/website/:websiteId/page/:pageId/widget/new/:widgetType", createWidget);
+app.post("/api/user/:userId/website/:websiteId/page/:pageId/widget/", createWidget);
 app.get("/api/user/:userId/website/:websiteId/page/:pageId/widget/:widgetId", findWidgetById);
 app.put("/api/user/:userId/website/:websiteId/page/:pageId/widget/:widgetId", updateWidget);
 app.delete("/api/user/:userId/website/:websiteId/page/:pageId/widget/:widgetId", deleteWidget);
@@ -51,7 +51,7 @@ function uploadImage(req, res) {
     var size          = myFile.size;
     var mimetype      = myFile.mimetype;
 
-    widget = req.body;
+    widget = getWidgetById(widgetId);
     widget.url = '/assignment/uploads/'+filename;
 
     var callbackUrl ="/assignment/index.html#!user/"+ userId +"/website/"+
@@ -121,13 +121,20 @@ function findWidgetByPageId(req, res) {
 
 function createWidget(req, res) {
     var pageId = req.params.pageId;
-    var type = req.params.widgetType;
     var widget = req.body;
 
     widget._id = "c" + (new Date()).getTime();
     widget.pageId = pageId;
-    widget.widgetType = type;
     widgets.push(widget);
-    res.send(widgets);
+    res.send(widget);
+}
+
+function getWidgetById(widgetId) {
+    for (var i = 0; i < widgets.length; i++) {
+        if (widgets[i]._id == widgetId) {
+            return widgets[i];
+        }
+    }
+    return null;
 }
 

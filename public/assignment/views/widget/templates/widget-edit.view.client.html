@@ -16,97 +16,33 @@
     </nav>
 
 
-    <div class="container-fluid">
+    <div class="container-fluid rz-contact">
         <div class="row">
-            <div class="col-sm-4 hidden-xs rz-split-view-left">
+            <!--<div class="col-sm-4 hidden-xs rz-split-view-left">-->
 
-                <div class="container-fluid">
-                    <ul class="list-group">
+              <!--<ng-include src = "'views/widget/templates/widget-chooser.view.client.html'"></ng-include>-->
+                <!---->
+            <!--</div>-->
 
-                        <li class="list-group-item">
-                            <a href="widget-heading-edit.view.client.html">
-                                Header
-                            </a>
-                        </li>
-
-                        <li class="list-group-item">
-                            <a href="widget-label.html">
-                                Label(Not Create Yet)
-                            </a>
-                        </li>
-
-                        <li class="list-group-item">
-                            <a href="widget-HTML.html">
-                                HTML(Not Create Yet)
-                            </a>
-                        </li>
-
-                        <li class="list-group-item">
-                            <a href="widget-text-input.html">
-                                Text Input(Not Create Yet)
-                            </a>
-                        </li>
-
-                        <li class="list-group-item">
-                            <a href="widget-link.html">
-                                Link(Not Create Yet)
-                            </a>
-                        </li>
-
-                        <li class="list-group-item">
-                            <a href="widget-button.html">
-                                Button(Not Create Yet)
-                            </a>
-                        </li>
-
-                        <li class="list-group-item">
-                            <a href="widget-image-edit.view.client.html">
-                                Image
-                            </a>
-                        </li>
-
-                        <li class="list-group-item">
-                            <a href="widget-youtube-edit.view.client.html">
-                                Youtube
-                            </a>
-                        </li>
-
-                        <li class="list-group-item">
-                            <a href="widget-data-table.html">
-                                Data Table(Not Create Yet)
-                            </a>
-                        </li>
-
-                        <li class="list-group-item">
-                            <a href="widge-repeater.html">
-                                Repeter(Not Create Yet)
-                            </a>
-                        </li>
-
-
-                    </ul>
-                </div>
-            </div>
-
-
-            <div class="col-xs-12 col-sm-8 pull-right rz-split-view-right">
-                <div ng-show="model.updateMessage" class="alert alert-info">
-                    {{model.updateMessage}}
-                </div>
-
+            <!--<div class="col-xs-12 col-sm-8 pull-right rz-split-view-right">-->
 
 
                 <div ng-switch="model.widget.widgetType">
-                        <div ng-include="model.getRightWidgetTypeUrl(model.widget.widgetType)"></div>
-
+                    <div ng-switch-when="HEADING">
+                        <ng-include src="'views/widget/templates/editors/widget-HEADING-edit.view.client.html'">
+                    </div>
+                    <div ng-switch-when="IMAGE">
+                        <ng-include src="'views/widget/templates/editors/widget-IMAGE-edit.view.client.html'">
+                    </div>
+                    <div ng-switch-when="YOUTUBE">
+                        <ng-include src="'views/widget/templates/editors/widget-YOUTUBE-edit.view.client.html'">
+                    </div>
+                    <div ng-switch-when="HTML">
+                        <ng-include src="'views/widget/templates/editors/widget-HTML-edit.view.client.html'">
+                    </div>
                 </div>
+            <!--</div>-->
 
-
-                    <a class="btn btn-default btn-block btn-danger"
-                       ng-click="model.deleteWidget(model.widgetId)"
-                       role="button">Delete</a>
-
-            </div>
 
 
 
