@@ -7,11 +7,11 @@ app.get("/api/user/:userId/website/:websiteId/page/:pageId", findPageById);
 app.put("/api/user/:userId/website/:websiteId/page/:pageId", updatePage);
 app.delete("/api/user/:userId/website/:websiteId/page/:pageId", deletePage);
 
-var pages = [
-    {_id: "321", name: "Post 1", websiteId: "456", description: "Lorem"},
-    {_id: "432", name: "Post 2", websiteId: "456", description: "Lorem"},
-    {_id: "543", name: "Post 3", websiteId: "456", description: "Lorem"}
-];
+// var pages = [
+//     {_id: "321", name: "Post 1", websiteId: "456", description: "Lorem"},
+//     {_id: "432", name: "Post 2", websiteId: "456", description: "Lorem"},
+//     {_id: "543", name: "Post 3", websiteId: "456", description: "Lorem"}
+// ];
 
 function deletePage(req, res) {
     var pageId = req.params.pageId;
@@ -71,10 +71,10 @@ function createPage(req, res) {
 
     pageModel
         .createPage(websiteId, page)
-        .then(function (page) {
-            res.json(page);
+        .then(function (pageDoc) {
+            res.json(pageDoc);
         }, function (err) {
-            res.sendStatus(404).send(err);
+            res.sendStatus(500).send(err);
         });
 }
 

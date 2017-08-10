@@ -10,7 +10,26 @@ pageModel.findPageById = findPageById;
 pageModel.deletePage = deletePage;
 pageModel.updatePage = updatePage;
 
+pageModel.addWidget = addWidget;
+pageModel.removeWidget= removeWidget;
+
 module.exports = pageModel;
+
+function removeWidget(pageId, widgetId) {
+    return pageModel.findbyId(pageId)
+        .then(function (page) {
+            var index = page.widgets.indexOf(widgetId);
+            page.widgets.splice(index, 1);
+            return page.save();
+    });
+}
+
+function addWidget(pageId, widgetId) {
+    return pageModel.findOne({_id: pageId}).then(function (page) {
+        page.widgets.push(widgetId);
+        return page.save();
+    });
+}
 
 function createPage(websiteId, page) {
     page.websiteId = websiteId;
@@ -29,9 +48,7 @@ function createPage(websiteId, page) {
 
 function findAllPagesForWebsite(websiteId) {
     return pageModel
-        .find({websiteId: websiteId})
-        .populate('website')
-        .exec();
+        .find({websiteId: websiteId});
 
 }
 

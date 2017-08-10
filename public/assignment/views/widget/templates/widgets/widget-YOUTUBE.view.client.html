@@ -1,1 +1,6 @@
-<iframe width="560" height="315" src="{{model.trustUrlResource(widget.url)}}" frameborder="0" allowfullscreen></iframe>
+<div class="youtube-widget" style="width: {{widget.width}}">
+    <iframe width="560" height="315"
+            ng-src="{{model.trustUrlResource(widget.url)}}"
+            frameborder="0"
+            allowfullscreen></iframe>
+</div>

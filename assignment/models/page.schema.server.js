@@ -5,7 +5,7 @@ var pageSchema = mongoose.Schema({
     title: String,
     description: String,
     websiteId: {type:mongoose.Schema.Types.ObjectId, ref: "WebsiteModel"},
-    // widgets: [{type:mongoose.Schema.Types.ObjectId, ref: "WidgetModel"}],
+    widgets: [{type:mongoose.Schema.Types.ObjectId, ref: "WidgetModel"}],
     dateCreated: {type: Date, default: Date.now}
 }, {collection: "page"});
 

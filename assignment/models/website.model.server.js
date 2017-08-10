@@ -27,11 +27,12 @@ function removePage(websiteId, pageId) {
 
 function addPage(websiteId, pageId) {
     return websiteModel
-        .findWebsiteById(websiteId)
+        .findbyId(websiteId)
         .then(function (website) {
-            website.pages.push(pageId);
-            return website.save();
-        })
+            console.log(website);
+            // website.pages.push(pageId);
+            // return website.save();
+        });
 }
 
 
@@ -59,7 +60,7 @@ function findAllWebsitesForUser(userId) {
 
 function findWebsiteById(websiteId) {
     return websiteModel
-        .findById(websiteId);
+        .findById(websiteId)
 
 }
 

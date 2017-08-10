@@ -2,6 +2,8 @@ var app = require("../../express");
 var multer = require('multer'); // npm install multer --save
 var upload = multer({ dest: __dirname+'/../public/assignment/uploads' });
 
+var widgetModel = require('../models/widget.model.server.js');
+
 app.get("/api/user/:userId/website/:websiteId/page/:pageId/widget", findWidgetByPageId);
 app.post("/api/user/:userId/website/:websiteId/page/:pageId/widget/", createWidget);
 app.get("/api/user/:userId/website/:websiteId/page/:pageId/widget/:widgetId", findWidgetById);
@@ -10,26 +12,28 @@ app.delete("/api/user/:userId/website/:websiteId/page/:pageId/widget/:widgetId",
 app.post("/api/upload", upload.single('myFile'), uploadImage);
 app.put('/api/page/:pageId/widget', sortWidget);
 
-var widgets = [
-    { "_id": "123", "widgetType": "HEADING", "pageId": "321", "size": 2, "text": "GIZMODO"},
-    { "_id": "234", "widgetType": "HEADING", "pageId": "321", "size": 4, "text": "Lorem ipsum"},
-    { "_id": "345", "widgetType": "IMAGE", "pageId": "321", "width": "100%",
-        "url": "http://lorempixel.com/400/200/"},
-    { "_id": "456", "widgetType": "HTML", "pageId": "321", "text": "<p>Lorem ipsum</p>"},
-    { "_id": "567", "widgetType": "HEADING", "pageId": "321", "size": 4, "text": "Lorem ipsum"},
-    { "_id": "678", "widgetType": "YOUTUBE", "pageId": "321", "width": "100%",
-        "url": "https://youtu.be/AM2Ivdi9c4E" },
-    { "_id": "789", "widgetType": "HTML", "pageId": "321", "text": "<p>Lorem ipsum</p>"}
-];
+// var widgets = [
+//     { "_id": "123", "widgetType": "HEADING", "pageId": "321", "size": 2, "text": "GIZMODO"},
+//     { "_id": "234", "widgetType": "HEADING", "pageId": "321", "size": 4, "text": "Lorem ipsum"},
+//     { "_id": "345", "widgetType": "IMAGE", "pageId": "321", "width": "100%",
+//         "url": "http://lorempixel.com/400/200/"},
+//     { "_id": "456", "widgetType": "HTML", "pageId": "321", "text": "<p>Lorem ipsum</p>"},
+//     { "_id": "567", "widgetType": "HEADING", "pageId": "321", "size": 4, "text": "Lorem ipsum"},
+//     { "_id": "678", "widgetType": "YOUTUBE", "pageId": "321", "width": "100%",
+//         "url": "https://youtu.be/AM2Ivdi9c4E" },
+//     { "_id": "789", "widgetType": "HTML", "pageId": "321", "text": "<p>Lorem ipsum</p>"}
+// ];
 
 function sortWidget(req, res) {
+    var pageId = req.params.pageId;
     var initial = req.query.initial;
     var final = req.query.final;
 
-    var widget = widgets.splice(initial, 1);
-    widgets.splice(final, 0, widget);
-
-    res.send(widgets);
+    widgetModel
+        .reorderWidget(pageId, initial, final)
+        .then(function () {
+            res.sendStatus(404);
+        });
 }
 
 
@@ -51,13 +55,16 @@ function uploadImage(req, res) {
     var size          = myFile.size;
     var mimetype      = myFile.mimetype;
 
-    widget = getWidgetById(widgetId);
-    widget.url = '/assignment/uploads/'+filename;
-
-    var callbackUrl ="/assignment/index.html#!user/"+ userId +"/website/"+
-        websiteId +"/page/"+pageId +"/widget/" + widgetId ;
-    res.redirect(callbackUrl);
-
+    widgetModel
+        .findWidgetById(widgetId)
+        .then(function(widget) {
+            widget.url = '/uploads/' + filename;
+            return widget.save();
+        })
+        .then(function(widget) {
+            var callbackUrl = '/assignment/#!/user/' + userId + '/website/' + websiteId + '/page/' + pageId + '/widget/' + widgetId;
+            res.redirect(callbackUrl);
+        });
 }
 
 
@@ -66,16 +73,11 @@ function uploadImage(req, res) {
 function deleteWidget(req, res) {
     var widgetId = req.params.widgetId;
 
-    for(var i = 0; i < widgets.length; i++) {
-        if(widgets[i]._id === widgetId) {
-            widgets.splice(i, 1);
-            res.sendStatus(200);
-            return;
-        }
-    }
-    res.sendStatus(404);
-
-
+    widgetModel
+        .deleteWidget(widgetId)
+        .then(function(status) {
+            res.sendStatus(404);
+     });
 
 }
 
@@ -83,25 +85,22 @@ function updateWidget(req, res) {
     var widgetId = req.params.widgetId;
     var widget = req.body;
 
-    for (var w in widgets) {
-        if (widgets[w]._id === widgetId) {
-            widgets[w] = widget;
-            res.send(widget);
-            return;
-        }
-    }
-    res.sendStatus(404);
+    widgetModel
+        .updateWidget(widgetId, widget)
+        .then(function(status) {
+            res.sendStatus(404);
+        });
 }
 
 function findWidgetById(req, res) {
 
-    for (var w in widgets) {
-        if (widgets[w]._id === req.params.widgetId) {
-            res.json(widgets[w]);
-            return;
-        }
-    }
-    res.sendStatus(404);
+    var widgetId = req.params.widgetId;
+
+    widgetModel
+        .findWidgetById(widgetId)
+        .then(function(widget) {
+            res.send(widget);
+        });
 }
 
 
@@ -109,32 +108,20 @@ function findWidgetByPageId(req, res) {
 
     var pageId = req.params.pageId;
 
-    var _widgets = [];
-
-    for (var w in widgets) {
-        if (widgets[w].pageId === pageId) {
-            _widgets.push(widgets[w]);
-        }
-    }
-    res.json(_widgets);
+    widgetModel
+        .findAllWidgetsForPage(pageId)
+        .then(function(widgets) {
+            res.send(widgets);
+        });
 }
 
 function createWidget(req, res) {
     var pageId = req.params.pageId;
     var widget = req.body;
 
-    widget._id = "c" + (new Date()).getTime();
-    widget.pageId = pageId;
-    widgets.push(widget);
-    res.send(widget);
-}
-
-function getWidgetById(widgetId) {
-    for (var i = 0; i < widgets.length; i++) {
-        if (widgets[i]._id == widgetId) {
-            return widgets[i];
-        }
-    }
-    return null;
+    widgetModel.createWidget(pageId, widget)
+        .then(function(widget) {
+        res.send(widget);
+    });
 }
 
