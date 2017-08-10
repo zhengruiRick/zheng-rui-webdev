@@ -3,15 +3,36 @@ var websiteSchema = require("./website.schema.server");
 
 var websiteModel = mongoose.model("WebsiteModel", websiteSchema);
 var userModel = require("./user.model.server");
+var pageModel = require("./page.model.server");
 
 websiteModel.createWebsiteForUser = createWebsiteForUser;
 websiteModel.findAllWebsitesForUser = findAllWebsitesForUser;
 websiteModel.findWebsiteById = findWebsiteById;
 websiteModel.deleteWebsite = deleteWebsite;
 websiteModel.updateWebsite = updateWebsite;
+websiteModel.addPage = addPage;
+websiteModel.removePage = removePage;
 
 module.exports = websiteModel;
 
+function removePage(websiteId, pageId) {
+    return websiteModel
+        .findWebsiteById(websiteId)
+        .then(function (website) {
+            var index = website.pages.indexOf(pageId);
+            website.pages.splice(index, 1);
+            return website.save();
+        })
+}
+
+function addPage(websiteId, pageId) {
+    return websiteModel
+        .findWebsiteById(websiteId)
+        .then(function (website) {
+            website.pages.push(pageId);
+            return website.save();
+        })
+}
 
 
 function createWebsiteForUser(userId, website) {
@@ -31,9 +52,7 @@ function createWebsiteForUser(userId, website) {
 
 function findAllWebsitesForUser(userId) {
     return websiteModel
-        .find({developer: userId})
-        .populate('developer')
-        .exec();
+        .find({developer: userId});
     
 }
 
@@ -41,6 +60,7 @@ function findAllWebsitesForUser(userId) {
 function findWebsiteById(websiteId) {
     return websiteModel
         .findById(websiteId);
+
 }
 
 function deleteWebsite(userId, websiteId) {

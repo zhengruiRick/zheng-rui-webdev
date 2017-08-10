@@ -41,7 +41,7 @@ function updateWebsite(req, res) {
         .then(function (status) {
             res.json(status);
         }, function (err) {
-            rs.sendStatus(404).send(err);
+            res.sendStatus(404).send(err);
         });
 }
 
