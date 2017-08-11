@@ -3,7 +3,6 @@ var websiteSchema = require("./website.schema.server");
 
 var websiteModel = mongoose.model("WebsiteModel", websiteSchema);
 var userModel = require("./user.model.server");
-var pageModel = require("./page.model.server");
 
 websiteModel.createWebsiteForUser = createWebsiteForUser;
 websiteModel.findAllWebsitesForUser = findAllWebsitesForUser;
@@ -26,12 +25,12 @@ function removePage(websiteId, pageId) {
 }
 
 function addPage(websiteId, pageId) {
+
     return websiteModel
-        .findbyId(websiteId)
+        .findWebsiteById(websiteId)
         .then(function (website) {
-            console.log(website);
-            // website.pages.push(pageId);
-            // return website.save();
+            website.pages.push(pageId);
+            return website.save();
         });
 }
 

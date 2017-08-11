@@ -22,8 +22,9 @@
         init();
 
         function createPage(page) {
-            var page = pageService.createPage(model.userId, model.websiteId,page)
-                .then(function () {
+            pageService
+                .createPage(model.userId, model.websiteId,page)
+                .then(function (page) {
                     $location.url("user/"+ model.userId+"/website/"+model.websiteId+"/page");
                 })
 

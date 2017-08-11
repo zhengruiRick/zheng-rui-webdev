@@ -38,11 +38,12 @@ function createPage(websiteId, page) {
         .create(page)
         .then(function (pageDoc) {
             pageTemp = pageDoc;
-            return websiteModel.addPage(websiteId, page._id);
+            return websiteModel.addPage(websiteId, pageTemp._id)
+            // return pageTemp;
         })
         .then(function (websiteDoc) {
             return pageTemp;
-        });
+        })
 
 }
 

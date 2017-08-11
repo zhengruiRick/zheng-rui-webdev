@@ -59,10 +59,7 @@
 
         function createPage(userId, websiteId, page) {
             var url = "/api/user/" + userId + "/website/" + websiteId + "/page";
-            return $http.post(url, page)
-                .then(function (res) {
-                    return res.data;
-                })
+            return $http.post(url, page);
         }
 
 
