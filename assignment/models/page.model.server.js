@@ -25,9 +25,11 @@ function removeWidget(pageId, widgetId) {
 }
 
 function addWidget(pageId, widgetId) {
-    return pageModel.findOne({_id: pageId}).then(function (page) {
-        page.widgets.push(widgetId);
-        return page.save();
+    return pageModel
+        .findPageById(pageId)
+        .then(function (page) {
+            page.widgets.push(widgetId);
+            return page.save();
     });
 }
 

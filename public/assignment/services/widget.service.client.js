@@ -60,7 +60,7 @@
             return $http.post(url, widget)
                 .then(function (res) {
                     return res.data;
-                })
+                });
 
 
 

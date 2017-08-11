@@ -84,11 +84,12 @@ function deleteWidget(req, res) {
 function updateWidget(req, res) {
     var widgetId = req.params.widgetId;
     var widget = req.body;
+    console.log(widget);
 
     widgetModel
         .updateWidget(widgetId, widget)
-        .then(function(status) {
-            res.sendStatus(404);
+        .then(function(widget) {
+            res.send(widget);
         });
 }
 
@@ -121,7 +122,7 @@ function createWidget(req, res) {
 
     widgetModel.createWidget(pageId, widget)
         .then(function(widget) {
-        res.send(widget);
+            res.send(widget);
     });
 }
 
