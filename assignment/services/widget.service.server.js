@@ -58,7 +58,7 @@ function uploadImage(req, res) {
     widgetModel
         .findWidgetById(widgetId)
         .then(function(widget) {
-            widget.url = '/uploads/' + filename;
+            widget.url = '../../../..//uploads/' + filename;
             return widget.save();
         })
         .then(function(widget) {
@@ -72,9 +72,10 @@ function uploadImage(req, res) {
 
 function deleteWidget(req, res) {
     var widgetId = req.params.widgetId;
+    var pageId = req.params.pageId;
 
     widgetModel
-        .deleteWidget(widgetId)
+        .deleteWidget(pageId, widgetId)
         .then(function(status) {
             res.sendStatus(404);
      });
