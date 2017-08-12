@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b81c1a5e-6902-41a8-a358-271e48023318" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/assignment/views/widget/templates/widgets/widget-TEXT.view.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/templates/widgets/widget-TEXT.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/models/database.js" afterPath="$PROJECT_DIR$/assignment/models/database.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/models/page.model.server.js" afterPath="$PROJECT_DIR$/assignment/models/page.model.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/models/widget.model.server.js" afterPath="$PROJECT_DIR$/assignment/models/widget.model.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/models/widget.schema.server.js" afterPath="$PROJECT_DIR$/assignment/models/widget.schema.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/services/widget.service.server.js" afterPath="$PROJECT_DIR$/assignment/services/widget.service.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/index.html" afterPath="$PROJECT_DIR$/public/assignment/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/controllers/widget-edit.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/widget/controllers/widget-edit.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/templates/editors/widget-HTML-edit.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/templates/editors/widget-HTML-edit.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/templates/widget-edit.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/templates/widget-edit.view.client.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -59,11 +49,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page.model.server.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page.model.server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assignment/models/page.model.server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="269">
               <caret line="68" column="11" lean-forward="false" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assignment/models/database.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -137,7 +137,6 @@
         <option value="$PROJECT_DIR$/assignment/models/website.model.server.js" />
         <option value="$PROJECT_DIR$/public/assignment/views/widget/templates/widgets/widget-IMAGE.view.client.html" />
         <option value="$PROJECT_DIR$/public/assignment/views/widget/templates/widget-edit.view.client.html" />
-        <option value="$PROJECT_DIR$/assignment/models/database.js" />
         <option value="$PROJECT_DIR$/assignment/models/widget.schema.server.js" />
         <option value="$PROJECT_DIR$/public/assignment/index.html" />
         <option value="$PROJECT_DIR$/public/assignment/views/widget/templates/widgets/widget-TEXT.view.client.html" />
@@ -147,6 +146,7 @@
         <option value="$PROJECT_DIR$/assignment/services/widget.service.server.js" />
         <option value="$PROJECT_DIR$/assignment/models/page.model.server.js" />
         <option value="$PROJECT_DIR$/public/assignment/views/widget/controllers/widget-edit.controller.client.js" />
+        <option value="$PROJECT_DIR$/assignment/models/database.js" />
       </list>
     </option>
   </component>
@@ -528,12 +528,12 @@
       <workItem from="1502466732645" duration="260000" />
       <workItem from="1502476094392" duration="8425000" />
       <workItem from="1502490730235" duration="80000" />
-      <workItem from="1502490824031" duration="9189000" />
+      <workItem from="1502490824031" duration="9227000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="364435000" />
+    <option name="totallyTimeSpent" value="364473000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -820,14 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/models/database.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="9" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assignment/models/widget.schema.server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
@@ -984,6 +976,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
           <caret line="68" column="11" lean-forward="false" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/models/database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
           <folding />
         </state>
       </provider>
