@@ -11,9 +11,17 @@
             "createUser": createUser,
             "findUserByUsername": findUserByUsername,
             "updateUser": updateUser,
-            "deleteUser": deleteUser
+            "deleteUser": deleteUser,
+            "checkLogin": checkLogin
         };
         return api;
+
+        function checkLogin() {
+            return $http.get("/api/checkLogin")
+                .then(function (res) {
+                    return res.data;
+                })
+        }
 
         function deleteUser(userId) {
 
@@ -42,9 +50,9 @@
 
         function findUserByCredentials(username, password) {
 
-            var url = "/api/user?username="+username+"&password="+password;
+            var url = "/api/login";
 
-            return $http.get(url);
+            return $http.post(url, {username: username, password: password});
 
 
 

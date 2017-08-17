@@ -1,20 +1,106 @@
 var app = require("../../express");
 var userModel = require("../models/user.model.server");
+var passport      = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
-var users = [
-    {_id: "123", username: "alice", password: "alice", firstName: "Alice", lastName: "Wonder", isAdmin: true},
-    {_id: "234", username: "bob", password: "bob", firstName: "Bob", lastName: "Marley"},
-    {_id: "345", username: "charly", password: "charly", firstName: "Charly", lastName: "Garcia"},
-    {_id: "456", username: "jannunzi", password: "jannunzi", firstName: "Jose", lastName: "Annunzi"}
-];
+passport.use(new LocalStrategy(localStrategy));
+
+
+passport.serializeUser(serializeUser);
+passport.deserializeUser(deserializeUser);
+
 
 //http handlers
+app.post("/api/login", passport.authenticate('local'), login);
+
 app.get("/api/users", getAllUsers);
 app.get("/api/user/:userId", getUserById);
 app.get("/api/user", findUser);
 app.post("/api/user", createUser);
 app.put("/api/user/:userId", updateUser);
 app.delete("/api/user/:userId", deleteUser);
+app.get("/api/checkLogin", checkLogin);
+app.get('/auth/google',  passport.authenticate('google', { scope : ['profile', 'email'] }));
+app.get('/googleCallBack',
+    passport.authenticate('google', {
+        successRedirect: '/#!/profile',
+        failureRedirect: '/#!/login'
+    }));
+
+
+
+
+var googleConfig = {
+    clientID     : process.env.GOOGLE_CLIENT_ID,
+    clientSecret : process.env.GOOGLE_CLIENT_SECRET,
+    callbackURL  : process.env.GOOGLE_CALLBACK_URL
+};
+
+passport.use(new GoogleStrategy(googleConfig, googleStrategy));
+
+function googleStrategy(token, refreshToken, profile, done) {
+    userModel
+        .findUserByGoogleId(profile.id)
+        .then(
+            function(user) {
+                if(user) {
+                    return done(null, user);
+                } else {
+                    var email = profile.emails[0].value;
+                    var emailParts = email.split("@");
+                    var newGoogleUser = {
+                        username:  emailParts[0],
+                        firstName: profile.name.givenName,
+                        lastName:  profile.name.familyName,
+                        email:     email,
+                        google: {
+                            id:    profile.id,
+                            token: token
+                        }
+                    };
+                    return userModel.createUser(newGoogleUser);
+                }
+            },
+            function(err) {
+                if (err) { return done(err); }
+            }
+        )
+        .then(
+            function(user){
+                return done(null, user);
+            },
+            function(err){
+                if (err) { return done(err); }
+            }
+        );
+}
+
+
+function checkLogin(req,res) {
+    res.send(req.isAuthenticated() ? req.user : "0");
+
+}
+
+function localStrategy(username, password, done) {
+    userModel
+        .findUserByCredentials(username, password)
+        .then(
+            function(user) {
+                if (!user) { return done(null, false); }
+                return done(null, user);
+            },
+            function(err) {
+                if (err) { return done(err); }
+            }
+        );
+}
+
+function login(req, res) {
+    var user = req.user;
+    res.json(user);
+
+}
 
 function deleteUser(req, res) {
     var userId = req.params.userId;
@@ -54,9 +140,10 @@ function createUser(req, res) {
 }
 
 function findUser(req, res) {
+    var body = req.body;
 
-    var username = req.query.username;
-    var password = req.query.password;
+    var username = body.username;
+    var password = body.password;
 
 
     userModel.findUserByCredentials(username, password)
@@ -87,3 +174,21 @@ function getUserById(req, res) {
         })
 
 }
+
+function serializeUser(user, done) {
+    done(null, user);
+}
+
+function deserializeUser(user, done) {
+    userModel
+        .findUserById(user._id)
+        .then(
+            function(user){
+                done(null, user);
+            },
+            function(err){
+                done(err, null);
+            }
+        );
+}
+

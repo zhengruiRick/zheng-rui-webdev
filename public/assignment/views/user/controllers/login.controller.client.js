@@ -26,7 +26,7 @@
                 else {
                     model.welcomeUser = user;
                     $rootScope.currentUser = user;
-                    $location.url("profile/"+ user._id);
+                    $location.url("profile/");
                 }
 
             });

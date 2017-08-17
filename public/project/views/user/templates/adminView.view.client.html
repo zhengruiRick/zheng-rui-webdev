@@ -1,0 +1,178 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+
+
+    <div class="navbar-brand">
+        My Admin work platform
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="rz-navbar-right-icon">
+            <button class="btn btn-danger navbar-btn" ng-click="model.signOut(model.user)">Sign Out</button>
+        </div>
+        <!--/.navbar-collapse -->
+    </div>
+</nav>
+
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-6">
+            <h2> My task</h2>
+        </div>
+
+        <div class="col-md-6">
+
+            <div>
+                <h2>All users
+
+                    <a href="#!/admin/{{model.adminId}}/create">
+                        <span class="glyphicon glyphicon-plus rz-navbar-right-icon"></span>
+                    </a>
+
+                </h2>
+            </div>
+
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for user...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Search</button>
+                </span>
+
+            </div>
+
+
+            <div class="rz-list">
+                <li ng-show="model.users" class="list-group-item active">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-6 col-sm-3 col-xs-6">
+                            Name
+                        </div>
+
+                        <div class="col-lg-4 hidden-md col-sm-5  hidden-xs">
+                            Email
+                        </div>
+
+                        <div class="col-lg-2 col-md-4 col-sm-2 col-xs-4">
+                            Loaned
+                        </div>
+
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+
+                        </div>
+                    </div>
+
+
+                </li>
+
+                <li ng-repeat="user in model.users" class="list-group-item">
+
+                    <div class="row">
+                        <div class="col-lg-2 col-md-6 col-sm-3 col-xs-6">
+                            {{user.firstName}} {{user.lastName}}
+                        </div>
+
+                        <div class="col-lg-4 hidden-md col-sm-5 hidden-xs">
+                            {{user.userEmail}}
+                        </div>
+
+                        <div class="col-lg-2 col-md-4 col-sm-2  col-xs-4">
+                            0
+                        </div>
+
+
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                            <a href="#!/admin/{{model.adminId}}/userProfile/{{user._id}}">
+                                <span class="pull-right glyphicon glyphicon-cog"> </span>
+                            </a>
+                        </div>
+                    </div>
+
+                </li>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="container-fluid">
+
+            <div>
+                <h2>All equipment
+
+                    <a href="#!/admin/{{model.adminId}}/equipment/new">
+                        <span class="glyphicon glyphicon-plus rz-navbar-right-icon" aria-hidden="true"></span>
+                    </a>
+
+                </h2>
+            </div>
+
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for equipment...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Search</button>
+                </span>
+
+            </div>
+
+
+            <div class="rz-list">
+                <li ng-show="model.equipments" class="list-group-item active">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-6 col-sm-3 col-xs-6">
+                            Kind
+                        </div>
+
+                        <div class="col-lg-4 hidden-md col-sm-5  hidden-xs">
+                            Name
+                        </div>
+
+                        <div class="col-lg-2 col-md-4 col-sm-2 col-xs-4">
+                            Available
+                        </div>
+
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+
+                        </div>
+
+
+                    </div>
+
+
+                </li>
+
+                <li ng-repeat="equipment in model.equipments" class="list-group-item">
+
+                    <div class="row">
+                        <div class="col-lg-2 col-md-6 col-sm-3 col-xs-6">
+                            {{equipment.kind}}
+                        </div>
+
+                        <div class="col-lg-4 hidden-md col-sm-5 hidden-xs">
+                            {{equipment.name}}
+                        </div>
+
+                        <div class="col-lg-2 col-md-4 col-sm-2  col-xs-4">
+                            {{equipment.available}}
+                        </div>
+
+
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                            <a href="#!/admin/{{model.adminId}}/equipmentProfile/{{equipment._id}}">
+                                <span class="pull-right glyphicon glyphicon-cog"> </span>
+                            </a>
+                        </div>
+                    </div>
+
+                </li>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>

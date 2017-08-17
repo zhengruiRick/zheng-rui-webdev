@@ -46,10 +46,11 @@ function findWidgetById(widgetId) {
 }
 
 function deleteWidget(pageId, widgetId) {
+
     return widgetModel
-        .findOneAndRemove({_id: widgetId})
-        .then(function (deletedWidget) {
-            return pageModel.removeWidget(deletedWidget.pageId, deletedWidget._id);
+        .remove({_id: widgetId})
+        .then(function () {
+            return pageModel.removeWidget(pageId, widgetId);
         });
 }
 

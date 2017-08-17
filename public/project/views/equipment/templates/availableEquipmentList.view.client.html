@@ -1,0 +1,104 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">All available Equipment</a>
+        </div>
+
+
+
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <form ng-show="!currentUser" class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" placeholder="Email" class="form-control" ng-model="model.user.userEmail">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" class="form-control" ng-model="model.user.password">
+                </div>
+                <button type="submit" class="btn btn-success" ng-click="model.login(model.user)">Sign in</button>
+
+            </form>
+
+            <div ng-show="currentUser" class="navbar-form navbar-right">
+                <a href="#!profile/userId">Welcome, {{currentUser.firstName}}</a>
+                <button class="btn btn-danger" ng-click="model.signOut(model.user)">Sign out</button>
+
+            </div>
+        </div>
+    </div><!--/.navbar-collapse -->
+</nav>
+<div class="container-fluid">
+
+    <div ng-show="!currentUser" class="alert alert-danger">
+        Please login to reserve
+    </div>
+
+    <ul class="list-group">
+
+        <li class="list-group-item active">
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-5 col-xs-10">
+                    Kind
+                </div>
+
+                <div class="col-lg-5 col-md-5 col-sm-5 hidden-xs">
+                    Name
+                </div>
+
+                <div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
+                    Detail
+                </div>
+
+                <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+                    <div ng-show="currentUser">
+                        Reserve
+                    </div>
+
+                </div>
+            </div>
+
+
+        </li>
+
+        <li ng-repeat="equipment in model.equipments" class="list-group-item">
+
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-5 col-xs-10">
+                    {{equipment.kind}}
+                </div>
+
+                <div class="col-lg-5 col-md-5 col-sm-5 hidden-xs">
+                    {{equipment.name}}
+                </div>
+
+                <div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
+                    {{equipment.detail}}
+                </div>
+
+                <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+
+                    <div ng-show="currentUser">
+                        <a href="#!/user/{{currentUser._id}}/equipment/{{equipment._id}}">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </li>
+
+    </ul>
+</div>
+
+
+
+

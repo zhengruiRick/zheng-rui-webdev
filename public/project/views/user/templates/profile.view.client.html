@@ -1,0 +1,105 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+
+
+    <div class="navbar-brand">
+        Profile
+    </div>
+
+
+
+    <div class="container-fluid">
+        <div class="rz-navbar-right-icon">
+            <button class="btn btn-danger navbar-btn" ng-click="model.signOut(model.user)">Sign Out</button>
+        </div>
+        <!--/.navbar-collapse -->
+    </div>
+</nav>
+
+    <!--<nav class="navbar navbar-default navbar-fixed-top">-->
+        <!--<div class="container-fluid">-->
+            <!--<div class="container-fluid">-->
+
+                <!--<a class="navbar-brand" href="#">Profile</a>-->
+                <!--<a class="navbar-brand rz-navbar-right-icon" ng-click="model.updateUser(model.user)">-->
+                    <!--<span class="glyphicon glyphicon-ok"></span>-->
+                <!--</a>-->
+
+
+            <!--</div>-->
+        <!--</div>-->
+    <!--</nav>-->
+
+
+    <div class="container-fluid">
+
+
+        <h2>Welcome back, {{model.user.firstName}}!</h2>
+        <div ng-show="model.updateMessage" class="alert alert-info">
+            {{model.updateMessage}}
+        </div>
+
+        <div ng-show="model.deleteMessage" class="alert alert-danger">
+            {{model.deleteMessage}}
+        </div>
+
+
+
+        <label for="userEmail"> My Email</label>
+        <input name="userEmail"
+               readonly
+               class="form-control"
+               type="text"
+               id="userEmail"
+               ng-model="model.user.userEmail"/>
+
+
+        <label for="firstname"> My First name</label>
+        <input name="firstname"
+               ng-model="model.user.firstName"
+               class="form-control"
+               id="firstname"/>
+
+        <label for="lastname"> My Last name</label>
+        <input name="lastname"
+               class="form-control"
+               id="lastname"
+               ng-model="model.user.lastName"/>
+
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="remember-me" ng-model="model.user.isAdmin"> isAdmin?
+            </label>
+        </div>
+
+
+
+
+
+        <a class="btn btn-primary btn-block"
+           ng-click ="model.updateUser(model.user)"
+           role="button">Update User</a>
+
+        <a class="btn btn-danger btn-block"
+           ng-click ="model.deleteUser(model.user)"
+           role="button">Delete User</a>
+
+
+
+        <a class="btn btn-default btn-block btn-success"
+           href="#!/admin/{{model.adminId}}"
+           role="button">My Admin work platform</a>
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <a ng-show="model.deleteMessage" class="navbar-brand rz-navbar-right-icon" href="#!/login">
+            <span class="glyphicon glyphicon-user"></span>
+        </a>
+
+        <a ng-show="!model.deleteMessage" class="navbar-brand rz-navbar-right-icon" href="#!/profile/{{model.user._id}}">
+            <span class="glyphicon glyphicon-user"></span>
+        </a>
+
+    </nav>
+
+
+

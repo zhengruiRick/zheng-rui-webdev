@@ -38,11 +38,7 @@
 
         function deleteWidget(userId, websiteId, pageId, widgetId) {
             var url = "/api/user/" + userId + "/website/" + websiteId + "/page/" + pageId +"/widget/" + widgetId;
-            return $http.delete(url)
-                .then(function (res) {
-                    return res.data;
-                });
-
+            return $http.delete(url);
         }
 
         function updateWidget(userId, websiteId, pageId, widgetId, widget) {

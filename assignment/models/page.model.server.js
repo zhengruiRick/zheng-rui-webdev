@@ -16,7 +16,8 @@ pageModel.removeWidget= removeWidget;
 module.exports = pageModel;
 
 function removeWidget(pageId, widgetId) {
-    return pageModel.findPageById(pageId)
+    return pageModel
+        .findPageById(pageId)
         .then(function (page) {
             var index = page.widgets.indexOf(widgetId);
             page.widgets.splice(index, 1);
@@ -64,7 +65,7 @@ function findPageById(pageId) {
 function deletePage(websiteId, pageId) {
     return pageModel
         .remove({_id: pageId})
-        .then(function () {
+        .then(function (res) {
             return websiteModel.removePage(websiteId, pageId);
         });
 }

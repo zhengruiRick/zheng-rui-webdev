@@ -1,0 +1,101 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Equipment Detail</a>
+        </div>
+
+
+        <div id="navbar" class="navbar-collapse collapse">
+
+
+            <div class="navbar-form navbar-right">
+                <a href="#!profile/userId">Welcome, {{model.user.firstName}}</a>
+                <button class="btn btn-danger" ng-click="model.signOut()">Sign out</button>
+
+            </div>
+        </div>
+    </div><!--/.navbar-collapse -->
+</nav>
+<div class="container-fluid">
+    <div ng-show="!model.reserveMeassage" class="container-fluid">
+
+        <h2 class="form-heading row">{{model.equipment.name}}</h2>
+        <div class="panel panel-default col-sm-6">
+            <div class="panel-heading">
+                <h3 class="panel-title">Equipment Id</h3>
+            </div>
+            <div class="panel-body">
+                {{model.equipment._id}}
+            </div>
+        </div>
+
+        <div class="panel panel-default col-sm-6">
+            <div class="panel-heading">
+                <h3 class="panel-title">Type</h3>
+            </div>
+            <div class="panel-body">
+                {{model.equipment.kind}}
+            </div>
+        </div>
+
+        <div class="panel panel-default col-sm-6">
+            <div class="panel-heading">
+                <h3 class="panel-title">Name</h3>
+            </div>
+            <div class="panel-body">
+                {{model.equipment.name}}
+            </div>
+        </div>
+
+
+        <div class="panel panel-default col-sm-6">
+            <div class="panel-heading">
+                <h3 class="panel-title">Detail</h3>
+            </div>
+            <div class="panel-body">
+                {{model.equipment.detail}}
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" ng-show="!model.reserveMeassage">
+
+        <div ng-show="model.isComputer" class="panel panel-default">
+            <div class="panel-heading">
+                <h6 class="panel-title">See more system information From Dell</h6>
+            </div>
+            <div class="panel-body">
+                <a href="https://dell.com">Click here</a>
+            </div>
+        </div>
+        <a class="btn btn-lg btn-primary btn-block" role="button" ng-click="model.reserveItem(model.equipment)">I want
+            to
+            reserve this</a>
+        <a class="btn btn-lg btn-danger btn-block" role="button" ng-click="model.login(model.user)">Find another one</a>
+    </div>
+
+
+    <div class="container-fluid" ng-show="model.reserveMeassage">
+        <div class="alert alert-success" role="alert">
+            <h2> {{model.reserveMeassage}}</h2>
+        </div>
+
+        <a class="btn btn-lg btn-danger btn-block" role="button" href="#!/user/{{model.user._id}}">Go to home page</a>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+

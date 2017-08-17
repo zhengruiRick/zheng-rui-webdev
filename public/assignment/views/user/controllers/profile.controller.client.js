@@ -6,9 +6,9 @@
 
 
 
-    function profileController($routeParams, $location, userService) {
+    function profileController($routeParams, $location, userService, checkLogin) {
         var model = this;
-        var userId = $routeParams["userId"];
+        var userId = checkLogin._id//$routeParams["userId"];
 
         model.updateUser = updateUser;
         model.deleteUser = deleteUser;

@@ -85,7 +85,6 @@ function deleteWidget(req, res) {
 function updateWidget(req, res) {
     var widgetId = req.params.widgetId;
     var widget = req.body;
-    console.log(widget);
 
     widgetModel
         .updateWidget(widgetId, widget)

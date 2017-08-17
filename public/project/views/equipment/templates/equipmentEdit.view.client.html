@@ -1,0 +1,127 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Equipment Edit</a>
+        </div>
+
+
+        <div id="navbar" class="navbar-collapse collapse">
+
+
+            <div class="navbar-form navbar-right">
+                <button class="btn btn-danger" ng-click="model.signOut()">Sign out</button>
+            </div>
+        </div>
+    </div><!--/.navbar-collapse -->
+</nav>
+<div class="container-fluid">
+
+    <div ng-show="model.updateMeassage">
+        <div class="alert alert-success" role="alert">
+            {{model.updateMeassage}}
+        </div>
+    </div>
+
+    <div ng-show="model.errorMessage">
+
+        <div class="alert alert-danger" role="alert">
+            {{model.errorMessage}}
+        </div>
+
+    </div>
+
+
+
+
+
+    <label for="id">Id</label>
+    <input name="id"
+           class="form-control"
+           id="id"
+           readonly
+           type="text"
+           ng-model="model.equipment._id"
+           placeholder=""/>
+
+    <label for="kind">kind</label>
+    <input name="kind"
+           class="form-control"
+           id="kind"
+           type="text"
+           readonly
+           ng-model="model.equipment.kind"
+           placeholder=""/>
+
+
+
+    <label for="name">Name</label>
+    <input name="id"
+           class="form-control"
+           id="name"
+           type="text"
+           ng-model="model.equipment.name"
+           placeholder=""/>
+
+    <label for="detail">Detail</label>
+    <input name="id"
+           class="form-control"
+           id="detail"
+           type="text"
+           ng-model="model.equipment.detail"
+           placeholder=""/>
+
+    <label ng-show="model.isComputer" for="serviceTag">Service Tag</label>
+    <input ng-show="model.isComputer"
+            name="id"
+           class="form-control"
+           id="serviceTag"
+           type="text"
+           ng-model="model.equipment.serviceTag"
+           placeholder=""/>
+
+    <label for="loanedBy">Loaned By</label>
+    <input name="id"
+           class="form-control"
+           id="loanedBy"
+           type="text"
+           ng-model="model.equipment.loanedBy"
+           placeholder=""/>
+
+    <label for="reservedBy">Reserved By</label>
+    <input name="id"
+           class="form-control"
+           id="reservedBy"
+           type="text"
+           ng-model="model.equipment.reservedBy"
+           placeholder=""/>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" id="available" ng-model="model.equipment.available">Available
+        </label>
+    </div>
+
+
+    <a class="btn btn-lg btn-success btn-block" role="button" ng-click="model.updateEquipment(model.equipment)">Update</a>
+    <a class="btn btn-lg btn-danger btn-block" role="button" ng-click="model.deleteEquipment()">Delete</a>
+    <a class="btn btn-lg btn-default btn-block" role="button" href="#!/admin/{{model.adminId}}">My admin Platform</a>
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
