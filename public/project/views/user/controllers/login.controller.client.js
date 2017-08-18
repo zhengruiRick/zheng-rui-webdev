@@ -27,7 +27,7 @@
                     model.welcomeUser = user;
                     $rootScope.currentUser = user;
 
-                    var url = "#!/user/" + user._id;
+                    var url = "/user/" + user._id;
                     $location.url(url);
                 }
 
