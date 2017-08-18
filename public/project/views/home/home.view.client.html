@@ -41,6 +41,8 @@
             want</p>
         <p><a ng-show="!currentUser" class="btn btn-primary btn-lg" href="#!/login" role="button">Getting started
             &raquo;</a></p>
+        <p><a ng-show="!currentUser" class="btn btn-default btn-lg" href="#!/login" role="button">Login with Google
+            &raquo;</a></p>
         <p><a ng-show="currentUser.isAdmin" class="btn btn-primary btn-lg" ng-click="model.adminLink(currentUser)"
               role="button">My work platform</a></p>
         <p><a ng-show="currentUser && !currentUser.isAdmin" class="btn btn-primary btn-lg" href="#!/changPassword/{{currentUser._id}}"
@@ -68,26 +70,26 @@
 
         </div>
 
-        <div ng-show="currentUser" class="col-md-4">
-            <h2>Equipment reserved by me</h2>
-            <h6 ng-show="model.reservedEquipments">Here is the list of your reserved list, if it is not empty, an Admin will contact you soon</h6>
-            <div class="container-fluid">
-                <h3 ><span ng-repeat="reserve in model.reservedEquipments" class="label label-default rz-list-icon">{{reserve.name}}</span></h3>
+        <!--<div ng-show="currentUser" class="col-md-4">-->
+            <!--<h2>Equipment reserved by me</h2>-->
+            <!--<h6 ng-show="model.reservedEquipments">Here is the list of your reserved list, if it is not empty, an Admin will contact you soon</h6>-->
+            <!--<div class="container-fluid">-->
+                <!--<h3 ><span ng-repeat="reserve in model.reservedEquipments" class="label label-default rz-list-icon">{{reserve.name}}</span></h3>-->
 
-            </div>
-            <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
-        </div>
+            <!--</div>-->
+            <!--&lt;!&ndash;<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>&ndash;&gt;-->
+        <!--</div>-->
 
-        <div ng-show="currentUser" class="col-md-4">
-            <h2>Equipment Loaned by me</h2>
-            <h6>Here is the list of your reserved list, if it is not empty, please let us know if you want return</h6>
-
-
-            <h3 ><span ng-repeat="loan in model.loanedEquipments" class="label label-default rz-list-icon">{{loan.name}}</span></h3>
+        <!--<div ng-show="currentUser" class="col-md-4">-->
+            <!--<h2>Equipment Loaned by me</h2>-->
+            <!--<h6>Here is the list of your reserved list, if it is not empty, please let us know if you want return</h6>-->
 
 
+            <!--<h3 ><span ng-repeat="loan in model.loanedEquipments" class="label label-default rz-list-icon">{{loan.name}}</span></h3>-->
 
-        </div>
+
+
+        <!--</div>-->
 
     </div>
 

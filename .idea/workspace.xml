@@ -2,174 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b81c1a5e-6902-41a8-a358-271e48023318" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/models/task.model.server.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/models/task.schema.server.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/services/task.service.server.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/project/services/task.service.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/pictures/rui.png" afterPath="$PROJECT_DIR$/public/pictures/rui.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/wiki/Project Description (project1) .pdf" afterPath="$PROJECT_DIR$/public/project/wiki/Project Description (project1) .pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/app.js" afterPath="$PROJECT_DIR$/assignment/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/models/database.js" afterPath="$PROJECT_DIR$/assignment/models/database.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/models/page.model.server.js" afterPath="$PROJECT_DIR$/assignment/models/page.model.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/models/page.schema.server.js" afterPath="$PROJECT_DIR$/assignment/models/page.schema.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/models/user.model.server.js" afterPath="$PROJECT_DIR$/assignment/models/user.model.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/models/user.schema.server.js" afterPath="$PROJECT_DIR$/assignment/models/user.schema.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/models/website.model.server.js" afterPath="$PROJECT_DIR$/assignment/models/website.model.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/models/website.schema.server.js" afterPath="$PROJECT_DIR$/assignment/models/website.schema.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/models/widget.model.server.js" afterPath="$PROJECT_DIR$/assignment/models/widget.model.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/models/widget.schema.server.js" afterPath="$PROJECT_DIR$/assignment/models/widget.schema.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/services/page.service.server.js" afterPath="$PROJECT_DIR$/assignment/services/page.service.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/services/user.service.server.js" afterPath="$PROJECT_DIR$/assignment/services/user.service.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/services/website.service.server.js" afterPath="$PROJECT_DIR$/assignment/services/website.service.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/services/widget.service.server.js" afterPath="$PROJECT_DIR$/assignment/services/widget.service.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lectures/mongoose.js" afterPath="$PROJECT_DIR$/lectures/mongoose.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/app.js" afterPath="$PROJECT_DIR$/project/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/models/database.js" afterPath="$PROJECT_DIR$/project/models/database.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/models/equipment.model.server.js" afterPath="$PROJECT_DIR$/project/models/equipment.model.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/models/equipment.schema.server.js" afterPath="$PROJECT_DIR$/project/models/equipment.schema.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/models/user.model.server.js" afterPath="$PROJECT_DIR$/project/models/user.model.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/models/user.schema.server.js" afterPath="$PROJECT_DIR$/project/models/user.schema.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/services/equipment.service.server.js" afterPath="$PROJECT_DIR$/project/services/equipment.service.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/services/user.service.server.js" afterPath="$PROJECT_DIR$/project/services/user.service.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/app.js" afterPath="$PROJECT_DIR$/public/assignment/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/config.js" afterPath="$PROJECT_DIR$/public/assignment/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/public/assignment/css/bootstrap-theme.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/assignment/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/css/style.css" afterPath="$PROJECT_DIR$/public/assignment/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/css/theme.css" afterPath="$PROJECT_DIR$/public/assignment/css/theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/directives/wbdv-sortable.js" afterPath="$PROJECT_DIR$/public/assignment/directives/wbdv-sortable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/services/flickr.service.client.js" afterPath="$PROJECT_DIR$/public/assignment/services/flickr.service.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/services/page.service.client.js" afterPath="$PROJECT_DIR$/public/assignment/services/page.service.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/services/user.service.client.js" afterPath="$PROJECT_DIR$/public/assignment/services/user.service.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/services/website.service.client.js" afterPath="$PROJECT_DIR$/public/assignment/services/website.service.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/services/widget.service.client.js" afterPath="$PROJECT_DIR$/public/assignment/services/widget.service.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/home/home.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/home/home.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/page/controllers/page-edit.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/page/controllers/page-edit.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/page/controllers/page-list.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/page/controllers/page-list.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/page/controllers/page-new.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/page/controllers/page-new.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/page/templates/page-edit.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/page/templates/page-edit.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/page/templates/page-list.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/page/templates/page-list.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/page/templates/page-new.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/page/templates/page-new.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/user/controllers/login.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/user/controllers/login.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/user/controllers/profile.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/user/controllers/profile.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/user/controllers/register.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/user/controllers/register.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/user/templates/login.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/user/templates/login.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/user/templates/profile.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/user/templates/profile.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/user/templates/register.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/user/templates/register.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/website/controllers/website-edit.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/website/controllers/website-edit.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/website/controllers/website-list.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/website/controllers/website-list.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/website/controllers/website-new.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/website/controllers/website-new.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/website/templates/website-edit.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/website/templates/website-edit.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/website/templates/website-list.component.html" afterPath="$PROJECT_DIR$/public/assignment/views/website/templates/website-list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/website/templates/website-list.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/website/templates/website-list.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/website/templates/website-new.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/website/templates/website-new.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/controllers/widget-edit.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/widget/controllers/widget-edit.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/controllers/widget-flickr-search.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/widget/controllers/widget-flickr-search.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/controllers/widget-list.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/widget/controllers/widget-list.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/controllers/widget-new.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/widget/controllers/widget-new.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/templates/editors/widget-HEADING-edit.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/templates/editors/widget-HEADING-edit.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/templates/editors/widget-HTML-edit.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/templates/editors/widget-HTML-edit.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/templates/editors/widget-IMAGE-edit.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/templates/editors/widget-IMAGE-edit.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/templates/editors/widget-TEXT-edit.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/templates/editors/widget-TEXT-edit.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/templates/editors/widget-YOUTUBE-edit.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/templates/editors/widget-YOUTUBE-edit.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/templates/widget-chooser.component.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/templates/widget-chooser.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/templates/widget-chooser.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/templates/widget-chooser.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/templates/widget-edit.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/templates/widget-edit.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/templates/widget-flickr-search.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/templates/widget-flickr-search.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/templates/widget-list.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/templates/widget-list.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/templates/widget-new.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/templates/widget-new.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/templates/widgets/widget-HEADING.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/templates/widgets/widget-HEADING.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/templates/widgets/widget-HTML.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/templates/widgets/widget-HTML.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/templates/widgets/widget-IMAGE.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/templates/widgets/widget-IMAGE.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/templates/widgets/widget-TEXT.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/templates/widgets/widget-TEXT.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/templates/widgets/widget-YOUTUBE.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/templates/widgets/widget-YOUTUBE.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/angular/index.html" afterPath="$PROJECT_DIR$/public/lectures/angular/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/directives/app.js" afterPath="$PROJECT_DIR$/public/lectures/directives/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/directives/directives.js" afterPath="$PROJECT_DIR$/public/lectures/directives/directives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/directives/index.html" afterPath="$PROJECT_DIR$/public/lectures/directives/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/directives/widget-list.html" afterPath="$PROJECT_DIR$/public/lectures/directives/widget-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/index.html" afterPath="$PROJECT_DIR$/public/lectures/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/jquery/app.js" afterPath="$PROJECT_DIR$/public/lectures/jquery/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/jquery/index.html" afterPath="$PROJECT_DIR$/public/lectures/jquery/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/jquery/omdb.html" afterPath="$PROJECT_DIR$/public/lectures/jquery/omdb.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/jquery/omdb.js" afterPath="$PROJECT_DIR$/public/lectures/jquery/omdb.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/omdb/app.js" afterPath="$PROJECT_DIR$/public/lectures/omdb/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/omdb/details.html" afterPath="$PROJECT_DIR$/public/lectures/omdb/details.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/omdb/index.html" afterPath="$PROJECT_DIR$/public/lectures/omdb/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/omdb/search.html" afterPath="$PROJECT_DIR$/public/lectures/omdb/search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/user-interface-development/grid-bootstrap-large.html" afterPath="$PROJECT_DIR$/public/lectures/user-interface-development/grid-bootstrap-large.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/user-interface-development/grid-bootstrap-medium.html" afterPath="$PROJECT_DIR$/public/lectures/user-interface-development/grid-bootstrap-medium.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/user-interface-development/grid.html" afterPath="$PROJECT_DIR$/public/lectures/user-interface-development/grid.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lectures/user-interface-development/index.html" afterPath="$PROJECT_DIR$/public/lectures/user-interface-development/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/app.js" afterPath="$PROJECT_DIR$/public/project/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/config.js" afterPath="$PROJECT_DIR$/public/project/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/css/jumbotron.css" afterPath="$PROJECT_DIR$/public/project/css/jumbotron.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/css/signin.css" afterPath="$PROJECT_DIR$/public/project/css/signin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/css/style.css" afterPath="$PROJECT_DIR$/public/project/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/index.html" afterPath="$PROJECT_DIR$/public/project/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/services/equipment.service.client.js" afterPath="$PROJECT_DIR$/public/project/services/equipment.service.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/services/user.service.client.js" afterPath="$PROJECT_DIR$/public/project/services/user.service.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/views/equipment/controllers/availableEquipmentList.controller.client.js" afterPath="$PROJECT_DIR$/public/project/views/equipment/controllers/availableEquipmentList.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/views/equipment/controllers/equipmentDetail.controller.client.js" afterPath="$PROJECT_DIR$/public/project/views/equipment/controllers/equipmentDetail.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/views/equipment/controllers/equipmentEdit.controller.client.js" afterPath="$PROJECT_DIR$/public/project/views/equipment/controllers/equipmentEdit.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/views/equipment/controllers/equipmentNew.controller.client.js" afterPath="$PROJECT_DIR$/public/project/views/equipment/controllers/equipmentNew.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/views/equipment/templates/availableEquipmentList.view.client.html" afterPath="$PROJECT_DIR$/public/project/views/equipment/templates/availableEquipmentList.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/views/equipment/templates/equipmentDetail.view.client.html" afterPath="$PROJECT_DIR$/public/project/views/equipment/templates/equipmentDetail.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/views/equipment/templates/equipmentEdit.view.client.html" afterPath="$PROJECT_DIR$/public/project/views/equipment/templates/equipmentEdit.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/views/equipment/templates/equipmentNew.view.client.html" afterPath="$PROJECT_DIR$/public/project/views/equipment/templates/equipmentNew.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/views/home/home.controller.client.js" afterPath="$PROJECT_DIR$/public/project/views/home/home.controller.client.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/views/home/home.view.client.html" afterPath="$PROJECT_DIR$/public/project/views/home/home.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/views/user/controllers/adminView.controller.client.js" afterPath="$PROJECT_DIR$/public/project/views/user/controllers/adminView.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/views/user/controllers/changePassword.controller.client.js" afterPath="$PROJECT_DIR$/public/project/views/user/controllers/changePassword.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/views/user/controllers/login.controller.client.js" afterPath="$PROJECT_DIR$/public/project/views/user/controllers/login.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/views/user/controllers/profile.controller.client.js" afterPath="$PROJECT_DIR$/public/project/views/user/controllers/profile.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/views/user/controllers/register.controller.client.js" afterPath="$PROJECT_DIR$/public/project/views/user/controllers/register.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/views/user/templates/adminView.view.client.html" afterPath="$PROJECT_DIR$/public/project/views/user/templates/adminView.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/views/user/templates/changePassword.view.client.html" afterPath="$PROJECT_DIR$/public/project/views/user/templates/changePassword.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/views/user/templates/login.view.client.html" afterPath="$PROJECT_DIR$/public/project/views/user/templates/login.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/views/user/templates/profile.view.client.html" afterPath="$PROJECT_DIR$/public/project/views/user/templates/profile.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/views/user/templates/register.view.client.html" afterPath="$PROJECT_DIR$/public/project/views/user/templates/register.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/wiki/User UML.class.violet.html" afterPath="$PROJECT_DIR$/public/project/wiki/User UML.class.violet.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/angular/angular-route.js" afterPath="$PROJECT_DIR$/public/vendor/angular/angular-route.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/dist/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/dist/css/bootstrap-theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/dist/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/dist/css/bootstrap-theme.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/dist/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/dist/css/bootstrap-theme.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/dist/css/bootstrap-theme.min.css.map" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/dist/css/bootstrap-theme.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/dist/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/dist/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/dist/css/bootstrap.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/dist/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/dist/css/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/dist/css/bootstrap.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/dist/js/bootstrap.js" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/dist/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/dist/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/dist/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/dist/js/npm.js" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/dist/js/npm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/js/affix.js" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/affix.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/js/alert.js" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/alert.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/js/button.js" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/button.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/js/carousel.js" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/carousel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/js/collapse.js" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/collapse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/js/dropdown.js" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/dropdown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/js/modal.js" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/modal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/js/popover.js" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/popover.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/js/scrollspy.js" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/scrollspy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/js/tab.js" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/tab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/js/tooltip.js" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/tooltip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/bootstrap/js/transition.js" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/js/transition.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/jquery/jquery-ui.css" afterPath="$PROJECT_DIR$/public/vendor/jquery/jquery-ui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/jquery/jquery-ui.js" afterPath="$PROJECT_DIR$/public/vendor/jquery/jquery-ui.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor/jquery/jquery.js" afterPath="$PROJECT_DIR$/public/vendor/jquery/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -206,11 +39,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminView.controller.client.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="adminView.controller.client.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/project/views/user/controllers/adminView.controller.client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
+            <state relative-caret-position="720">
               <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assignment/models/database.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.view.client.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/project/views/home/home.view.client.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -233,6 +86,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
               <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/models/database.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -293,7 +156,6 @@
         <option value="$PROJECT_DIR$/public/project/views/equipment/templates/equipmentEdit.view.client.html" />
         <option value="$PROJECT_DIR$/project/services/equipment.service.server.js" />
         <option value="$PROJECT_DIR$/project/models/equipment.model.server.js" />
-        <option value="$PROJECT_DIR$/public/project/views/home/home.view.client.html" />
         <option value="$PROJECT_DIR$/public/project/views/user/templates/changePassword.view.client.html" />
         <option value="$PROJECT_DIR$/public/project/services/user.service.client.js" />
         <option value="$PROJECT_DIR$/project/services/user.service.server.js" />
@@ -313,6 +175,7 @@
         <option value="$PROJECT_DIR$/public/project/views/user/templates/adminView.view.client.html" />
         <option value="$PROJECT_DIR$/project/services/task.service.server.js" />
         <option value="$PROJECT_DIR$/public/project/views/user/controllers/adminView.controller.client.js" />
+        <option value="$PROJECT_DIR$/public/project/views/home/home.view.client.html" />
       </list>
     </option>
   </component>
@@ -806,12 +669,12 @@
       <workItem from="1502891008490" duration="27177000" />
       <workItem from="1502950570921" duration="24656000" />
       <workItem from="1503021559561" duration="180000" />
-      <workItem from="1503021744344" duration="3694000" />
+      <workItem from="1503021744344" duration="4252000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="492124000" />
+    <option name="totallyTimeSpent" value="492682000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -829,7 +692,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22471099" sideWeight="0.48164147" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40868455" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40868455" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22575977" sideWeight="0.5183585" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1075,34 +938,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/models/database.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="9" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assignment/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/models/database.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/project/views/home/home.view.client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="45" column="99" lean-forward="false" selection-start-line="45" selection-start-column="99" selection-end-line="45" selection-end-column="99" />
           <folding />
         </state>
       </provider>
@@ -1255,8 +1094,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/project/views/user/controllers/adminView.controller.client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
+        <state relative-caret-position="720">
           <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/models/database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/models/database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/project/views/home/home.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
           <folding />
         </state>
       </provider>
