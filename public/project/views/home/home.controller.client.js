@@ -5,7 +5,7 @@
         .controller("homeController", homeController);
 
 
-    function homeController($location, userService, $rootScope, equipmentService, $routeParams) {
+    function homeController($location, userService, $rootScope, equipmentService, $routeParams,weatherService) {
         var model = this;
         var userConfirm = false;
 
@@ -21,6 +21,20 @@
             model.adminLink = adminLink;
 
             function init() {
+                weatherService
+                    .getWeather()
+                    .then(function (res) {
+                        var weatherJson = res.data;
+                        console.log(weatherJson)
+                        model.minTemp = (weatherJson.main.temp_min*9/5 - 459.67).toFixed(2);
+                        model.maxTemp = (weatherJson.main.temp_max*9/5 - 459.67).toFixed(2);
+                        model.curTemp = (weatherJson.main.temp_temp*9/5 - 459.67).toFixed(2);
+                        model.curWea = (weatherJson.weather[0].main);
+
+                    })
+
+
+
                 if (userConfirm) {
                     equipmentService
                         .findReservedEquipmentByUserId(userId)
