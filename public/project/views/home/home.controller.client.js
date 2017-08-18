@@ -56,7 +56,7 @@
 
             function signOut() {
                 $rootScope.currentUser = null;
-                $location.url("/");
+                $location.url("#!/");
             }
 
             function adminLink(user) {
