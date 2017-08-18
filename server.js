@@ -8,11 +8,12 @@ var passport        = require('passport');
 app.use(cookieParser());
 
 app.use(session({
-    secret: 'this is the secret',
+    secret: 'this is the secret', //process.env.SESSION_SECRET
     resave: true,
     saveUninitialized: true
 }));
 
+app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
 

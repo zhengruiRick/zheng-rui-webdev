@@ -3,7 +3,7 @@
         .module("LoanerApp")
         .controller("equipmentDetailController", equipmentDetailController);
 
-    function equipmentDetailController($routeParams, $location, userService, $rootScope,equipmentService) {
+    function equipmentDetailController($routeParams, $location, userService, $rootScope,equipmentService, taskService) {
         var model = this;
 
         var model = this;
@@ -44,6 +44,7 @@
         }
 
         function reserveItem(equipment) {
+            taskService.createTask({userId: userId, equipmentId: equipmentId});
             equipmentService.reserveItem(userId, equipmentId, equipment)
                 .then(function (res) {
                     model.reserveMeassage = "reserve Successfully, An Admin will deliver it soon";

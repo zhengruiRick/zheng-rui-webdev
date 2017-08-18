@@ -6,7 +6,7 @@
 
 
 
-    function adminViewController($location, userService, equipmentService,$routeParams, $rootScope) {
+    function adminViewController($location, userService, taskService, equipmentService,$routeParams, $rootScope) {
         var model = this;
         var userId = $routeParams["userId"];
 
@@ -15,6 +15,7 @@
 
             model.signOut =signOut;
             model.adminId = userId;
+            model.deleteTask = deleteTask;
 
             userService.findUserById(userId)
                 .then(function (response) {
@@ -29,6 +30,11 @@
                     model.equipments = res.data;
 
                 })
+            taskService.findAllTasks()
+                .then(function (res) {
+                model.tasks = res.data;
+
+            })
         }
         init();
 
@@ -40,6 +46,12 @@
         function signOut() {
             $rootScope.currentUser = null;
             $location.url("/");
+        }
+
+        function deleteTask(taskId) {
+            taskService.deleteTask(taskId);
+            $location.url("#!/admin/"+ userId);
+
         }
 
         // function login(user) {

@@ -3,7 +3,7 @@
         .module("LoanerApp")
         .factory("equipmentService", equipmentService);
 
-    function equipmentService($http) {
+    function equipmentService($http,taskService) {
 
         var api = {
             "findAvailableEquipmentList": findAvailableEquipmentList,
@@ -72,6 +72,7 @@
 
         function reserveItem(userId, equipmentId, equipment) {
             var url = "/loanerApp/reserve/" + equipmentId;
+            // var urlTask = "/loanerApp/task/" + userId + "/" + equipmentId;
             equipment.reservedBy = userId;
             equipment.available = false;
             return $http.put(url, equipment)
