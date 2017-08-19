@@ -1,29 +1,20 @@
 (function () {
     angular
         .module("LoanerApp")
-        .controller("availableEquipmentListController", availableEquipmentListController);
+        .controller("availableEquipmentListViewController", availableEquipmentListViewController);
 
-    function availableEquipmentListController($routeParams, $location, userService,equipmentService, checkLogin) {
+    function availableEquipmentListViewController($location, userService, $rootScope,equipmentService) {
         var model = this;
-        console.log(checkLogin);
 
-        model.userId = checkLogin._id;
+        var model = this;
 
         var model = this;
         model.login = login;
-        model.logout = logout;
 
 
 
         function init() {
 
-                userService.findUserById(model.userId)
-                    .then(function (res) {
-                        var tempUser = res.data;
-                        model.user = tempUser;
-                    })
-
-            }
             equipmentService
                 .findAvailableEquipmentList()
                 .then(function (equipments) {
@@ -31,7 +22,7 @@
 
                 });
 
-
+        }
         init();
 
         function login(user) {
@@ -48,14 +39,6 @@
                     }
 
                 });
-
-        }
-
-        function logout() {
-            userService.logout()
-                .then(function (res) {
-                    $location.url("/");
-                })
 
         }
 

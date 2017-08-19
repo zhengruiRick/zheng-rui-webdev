@@ -6,9 +6,9 @@
 
 
 
-    function changePasswordController($routeParams, $location, userService) {
+    function changePasswordController($routeParams, $location, userService, checkLogin) {
         var model = this;
-        var userId = $routeParams["userId"];
+        var userId = checkLogin._id;
 
         model.updateUser = updateUser;
         model.changePassword = changePassword;

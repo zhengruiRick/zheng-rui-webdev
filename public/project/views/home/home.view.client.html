@@ -13,7 +13,7 @@
 
 
         <div id="navbar" class="navbar-collapse collapse">
-            <form ng-show="!currentUser" class="navbar-form navbar-right">
+            <form ng-show="!model.userId" class="navbar-form navbar-right">
                 <div class="form-group">
                     <input type="text" placeholder="Email" class="form-control" ng-model="model.user.userEmail">
                 </div>
@@ -24,9 +24,9 @@
 
             </form>
 
-            <div ng-show="currentUser" class="navbar-form navbar-right">
-                <a href="#!profile/userId">Welcome, {{currentUser.firstName}}</a>
-                <button class="btn btn-danger" ng-click="model.signOut(model.user)">Sign out</button>
+            <div ng-show="model.userId" class="navbar-form navbar-right">
+                <a href="#!profile/userId">Welcome, {{model.user.firstName}}</a>
+                <button class="btn btn-danger" ng-click="model.logout()">Sign out</button>
 
             </div>
         </div>
@@ -74,20 +74,20 @@
         </div>
 
 
-        <p><a ng-show="!currentUser" class="btn btn-primary btn-lg" href="#!/login" role="button">Getting started
+        <p><a ng-show="!model.userId" class="btn btn-primary btn-lg" href="#!/login" role="button">Getting started
             &raquo;</a></p>
         <p>
-            <a ng-show="!currentUser" href="loanerApp/auth/google" class="btn btn-danger btn-lg">
+            <a ng-show="!model.userId" href="loanerApp/auth/google" class="btn btn-danger btn-lg">
                 Login with
                 <span class="fa fa-google-plus"></span>
                 &raquo;
             </a>
         </p>
 
-        <p><a ng-show="currentUser.isAdmin" class="btn btn-primary btn-lg" ng-click="model.adminLink(currentUser)"
+        <p><a ng-show="model.userId && model.user.isAdmin" class="btn btn-primary btn-lg" ng-click="model.adminLink(model.user)"
               role="button">My work platform</a></p>
-        <p><a ng-show="currentUser && !currentUser.isAdmin" class="btn btn-primary btn-lg"
-              href="#!/changPassword/{{currentUser._id}}"
+        <p><a ng-show="model.userId && !model.user.isAdmin" class="btn btn-primary btn-lg"
+              href="#!/changPassword/"
               role="button">Change My Password</a></p>
 
     </div>
@@ -100,19 +100,19 @@
             <h2>All available equipment</h2>
 
 
-            <div ng-show="currentUser">
-                <p><a class="btn btn-default" href="#!/availableEquipmentList/{{currentUser._id}}" role="button">View
+            <div ng-show="model.user">
+                <p><a class="btn btn-default" href="#!/availableEquipmentList/user" role="button">View
                     All available equipment &raquo;</a></p>
             </div>
 
-            <div ng-show="!currentUser">
-                <p><a class="btn btn-default" href="#!/availableEquipmentList/notLogin" role="button">View All available
+            <div ng-show="!model.user">
+                <p><a class="btn btn-default" href="#!/availableEquipmentList/" role="button">View All available
                     equipment &raquo;</a></p>
             </div>
 
         </div>
 
-        <div ng-show="currentUser" class="col-md-6">
+        <div ng-show="model.user" class="col-md-6">
             <h2>Equipment reserved by me</h2>
             <h6 ng-show="model.reservedEquipments">Here is the list of your reserved list, if it is not empty, an Admin
                 will contact you soon</h6>

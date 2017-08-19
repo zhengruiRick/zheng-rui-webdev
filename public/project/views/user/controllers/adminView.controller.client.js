@@ -13,7 +13,7 @@
 
         function init() {
 
-            model.signOut =signOut;
+            model.logout =logout;
             model.adminId = userId;
             model.deleteTask = deleteTask;
 
@@ -43,9 +43,12 @@
         //
         // }
 
-        function signOut() {
-            $rootScope.currentUser = null;
-            $location.url("/");
+        function logout() {
+            userService.logout()
+                .then(function (res) {
+                    $location.url("/");
+                })
+
         }
 
         function deleteTask(taskId) {

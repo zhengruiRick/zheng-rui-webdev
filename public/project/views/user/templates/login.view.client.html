@@ -23,6 +23,13 @@
 
             <!--<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>-->
             <a class="btn btn-lg btn-primary btn-block" role="button" ng-click="model.login(model.user)">Sign in</a>
+
+            <a ng-show="!model.userId" href="loanerApp/auth/google" class="btn btn-lg btn-default btn-block">
+                Login with
+                <span class="fa fa-google-plus"></span>
+                &raquo;
+            </a>
+
             <a class="btn btn-lg btn-danger btn-block" href="#!/" role="button">Back</a>
 
 

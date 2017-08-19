@@ -13,12 +13,18 @@
             "findUserByUserEmail": findUserByUserEmail,
             "updateUser": updateUser,
             "deleteUser": deleteUser,
-            "checkLogin": checkLogin
+            "checkLogin": checkLogin,
+            "logout": logout,
         };
         return api;
 
+        function logout() {
+            return $http.get("/loanerApp/logout");
+
+        }
+
         function checkLogin() {
-            return $http.get("/api/checkLogin")
+            return $http.get("/loanerApp/checkLogin")
                 .then(function (res) {
                     return res.data;
                 })
@@ -54,15 +60,15 @@
         }
 
 
-        function findUserByCredentials(userEmail, password) {
-
-            var url = "/loanerApp/user?userEmail="+userEmail+"&password="+password;
-
-            return $http.get(url);
-
-
-
-        }
+        // function findUserByCredentials(userEmail, password) {
+        //
+        //     var url = "/loanerApp/user?userEmail="+userEmail+"&password="+password;
+        //
+        //     return $http.get(url);
+        //
+        //
+        //
+        // }
 
         function login(userEmail, password) {
 

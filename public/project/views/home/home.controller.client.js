@@ -5,27 +5,20 @@
         .controller("homeController", homeController);
 
 
-    function homeController($location, userService, $rootScope, equipmentService, $routeParams,weatherService) {
-        var model = this;
-        var userConfirm = false;
+    function homeController($location, userService,weatherService) {
 
-        if ($routeParams.userId) {
-            userConfirm = true;
-            var userId = $routeParams.userId;
-        }
+        var model = this;
 
 
         function init() {
             model.login = login;
-            model.signOut = signOut;
-            model.adminLink = adminLink;
+            model.logout = logout;
 
             function init() {
                 weatherService
                     .getWeather()
                     .then(function (res) {
                         var weatherJson = res.data;
-                        console.log(weatherJson)
                         model.minTemp = (weatherJson.main.temp_min*9/5 - 459.67).toFixed(2);
                         model.maxTemp = (weatherJson.main.temp_max*9/5 - 459.67).toFixed(2);
                         model.curTemp = (weatherJson.main.temp_temp*9/5 - 459.67).toFixed(2);
@@ -33,21 +26,6 @@
 
                     })
 
-
-
-                if (userConfirm) {
-                    equipmentService
-                        .findReservedEquipmentByUserId(userId)
-                        .then(function (res) {
-                            model.reservedEquipments = res.data;
-                        });
-
-                    equipmentService.findLoanedEquipmentByUserId(userId)
-                        .then(function (res) {
-                            model.loanedEquipments = res.data;
-                        });
-
-                    }
             }
 
             init();
@@ -60,22 +38,18 @@
                             $location.url("/login");
                         }
                         else {
-                            $rootScope.currentUser = user;
-                            var url = "/user/" + user._id;
+                            var url = "/user/";
                             $location.url(url);
                         }
 
                     });
             }
+            function logout() {
+                userService.logout()
+                    .then(function (res) {
+                        $location.url("/");
+                    })
 
-            function signOut() {
-                $rootScope.currentUser = null;
-                $location.url("#!/");
-            }
-
-            function adminLink(user) {
-                var url = "/admin/" + user._id;
-                $location.url(url);
             }
 
         }

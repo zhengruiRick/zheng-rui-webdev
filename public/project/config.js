@@ -19,10 +19,13 @@
                 controllerAs: "model"
             })
 
-            .when("/user/:userId",{
+            .when("/user/",{
                 templateUrl: "views/home/home.view.client.html",
-                controller: "homeController",
-                controllerAs: "model"
+                controller: "homeLoginController",
+                controllerAs: "model",
+                resolve: {
+                    checkLogin: checkLogin
+                }
             })
 
 
@@ -60,7 +63,7 @@
                 controllerAs: "model"
             })
 
-            .when("/changPassword/:userId", {
+            .when("/changPassword/", {
                 templateUrl: "views/user/templates/changePassword.view.client.html",
                 controller: "changePasswordController",
                 controllerAs: "model",
@@ -69,22 +72,28 @@
                 }
             })
 
-            // .when("/AllAvailableList", {
-            //     templateUrl: "views/equipment/templates/AllAvailableList.view.client.html",
-            //     controller: "availableEquipmentListController",
-            //     controllerAs: "model"
-            // })
-
-            .when("/availableEquipmentList/:userId", {
+            .when("/availableEquipmentList/", {
                 templateUrl: "views/equipment/templates/availableEquipmentList.view.client.html",
-                controller: "availableEquipmentListController",
+                controller: "availableEquipmentListViewController",
                 controllerAs: "model"
             })
 
-            .when("/user/:userId/equipment/:equipmentId", {
+            .when("/availableEquipmentList/user", {
+                templateUrl: "views/equipment/templates/availableEquipmentList.view.client.html",
+                controller: "availableEquipmentListController",
+                controllerAs: "model",
+                resolve: {
+                    checkLogin: checkLogin
+                }
+            })
+
+            .when("/reserve/:equipmentId", {
                 templateUrl: "views/equipment/templates/equipmentDetail.view.client.html",
                 controller: "equipmentDetailController",
-                controllerAs: "model"
+                controllerAs: "model",
+                resolve: {
+                    checkLogin: checkLogin
+                }
             })
 
             .when("/admin/:adminId/equipmentProfile/:equipmentId", {
@@ -178,13 +187,13 @@
 
     }
 
-    function checkLogin( userService, $q) {
+    function checkLogin(userService, $q, $location) {
         var deferred =  $q.defer();
         userService.checkLogin()
             .then(function (user) {
                 if (user ==="0") {
                     deferred.reject();
-
+                    $location.url("/login");
 
                 } else {
                     deferred.resolve(user);

@@ -9,15 +9,11 @@ var googleConfig = {
 
     clientID     : process.env.GOOGLE_CLIENT_ID,
     clientSecret : process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL  : process.env.GOOGLE_CALLBACK_URL //"http://localhost:3000/googleCallBack"
+    callbackURL  : process.env.GOOGLE_CALLBACK_URL // "http://localhost:3000/googleCallBack" //
 };
 
 passport.use(new LocalStrategy(localStrategy));
 passport.use(new GoogleStrategy(googleConfig, googleStrategy));
-
-
-var auth = authorized;
-
 
 
 passport.serializeUser(serializeUser);
@@ -25,14 +21,11 @@ passport.deserializeUser(deserializeUser);
 
 
 
-
-
-
-
 //http handlers
 
 app.post("/loanerApp/login", passport.authenticate('local'), login);
 app.get("/loanerApp/checkLogin", checkLogin);
+app.get("/loanerApp/logout", logout)
 
 app.get("/loanerApp/user", findUser);
 app.get("/loanerApp/users", getAllUsers);
@@ -44,10 +37,14 @@ app.delete("/loanerApp/user/:userId", deleteUser);
 app.get("/project/loanerApp/auth/google", passport.authenticate('google', { scope : ['profile', 'email'] }));
 app.get("/googleCallBack",
     passport.authenticate('google', {
-        successRedirect: '/project/index.html',
-        failureRedirect: '/project/index.html#!login'
+        successRedirect: '/project/#!user/',
+        failureRedirect: '/project/#!login'
     }));
 
+function logout(req, res) {
+    req.logOut();
+    res.send(200);
+}
 
 
 function localStrategy(username, password, done) {
@@ -55,7 +52,9 @@ function localStrategy(username, password, done) {
         .findUserByCredentials(username, password)
         .then(
             function(user) {
-                if (!user) { return done(null, false); }
+                if (!user) {
+                    return done(null, false);
+                }
                 return done(null, user);
             },
             function(err) {
@@ -66,7 +65,7 @@ function localStrategy(username, password, done) {
 
 function authorized (req, res, next) {
     if (!req.isAuthenticated()) {
-        res.send(401);
+        res.send(404);
     } else {
         next();
     }
@@ -186,6 +185,7 @@ function logout(req, res) {
 }
 
 function checkLogin(req, res) {
+    console.log(req.isAuthenticated());
     res.send(req.isAuthenticated() ? req.user : '0');
 }
 
@@ -226,5 +226,7 @@ function googleStrategy(token, refreshToken, profile, done) {
             }
         );
 }
+
+
 
 

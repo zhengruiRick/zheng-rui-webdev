@@ -3,11 +3,11 @@
         .module("LoanerApp")
         .controller("equipmentDetailController", equipmentDetailController);
 
-    function equipmentDetailController($routeParams, $location, userService, $rootScope,equipmentService, taskService) {
+    function equipmentDetailController(checkLogin, $routeParams, $location, userService, $rootScope,equipmentService, taskService) {
         var model = this;
 
         var model = this;
-        var userId = $routeParams["userId"];
+        var userId = checkLogin._id;
         var equipmentId = $routeParams["equipmentId"]
 
         var model = this;
@@ -38,7 +38,6 @@
         init();
 
         function signOut() {
-            $rootScope.currentUser = null;
             $location.url("/");
 
         }
