@@ -20,6 +20,7 @@
             userService.findUserByCredentials(user.userEmail, user.password)
                 .then(function (res) {
                 user = res.data;
+                console.log(res.status())
                 if (user === "0") {
                     model.errorMessage= "Login information incorrect, please try again!"
                 }

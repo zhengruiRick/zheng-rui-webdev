@@ -10,6 +10,7 @@ projectuserModel.updateUser= updateUser;
 projectuserModel.findUserByCredentials = findUserByCredentials;
 projectuserModel.deleteUser = deleteUser;
 projectuserModel.findAllUsers = findAllUsers;
+projectuserModel.findUserByGoogleId = findUserByGoogleId;
 // projectuserModel.addEquipment = addEquipment;
 // projectuserModel.removeEquipment = removeEquipment;
 
@@ -34,6 +35,12 @@ module.exports= projectuserModel;
 //             return user.save();
 //         })
 // }
+
+function findUserByGoogleId(googleId) {
+
+    return projectuserModel.findOne({'google.id':googleId});
+
+}
 
 function deleteUser(userId) {
     return projectuserModel.remove({_id: userId});

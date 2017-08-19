@@ -76,8 +76,14 @@
 
         <p><a ng-show="!currentUser" class="btn btn-primary btn-lg" href="#!/login" role="button">Getting started
             &raquo;</a></p>
-        <p><a ng-show="!currentUser" class="btn btn-default btn-lg" href="#!/login" role="button">Login with Google
-            &raquo;</a></p>
+        <p>
+            <a ng-show="!currentUser" href="loanerApp/auth/google" class="btn btn-danger btn-lg">
+                Login with
+                <span class="fa fa-google-plus"></span>
+                &raquo;
+            </a>
+        </p>
+
         <p><a ng-show="currentUser.isAdmin" class="btn btn-primary btn-lg" ng-click="model.adminLink(currentUser)"
               role="button">My work platform</a></p>
         <p><a ng-show="currentUser && !currentUser.isAdmin" class="btn btn-primary btn-lg"

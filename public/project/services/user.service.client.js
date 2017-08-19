@@ -6,7 +6,7 @@
     function userService($http) {
 
         var api = {
-            "findUserByCredentials": findUserByCredentials,
+            "findUserByCredentials": login,
             "findUserById": findUserById,
             "findAllUsers": findAllUsers,
             "createUser": createUser,
@@ -59,6 +59,16 @@
             var url = "/loanerApp/user?userEmail="+userEmail+"&password="+password;
 
             return $http.get(url);
+
+
+
+        }
+
+        function login(userEmail, password) {
+
+            var url = "/loanerApp/login";
+
+            return $http.post(url, {username: userEmail, password:password});
 
 
 

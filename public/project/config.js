@@ -63,7 +63,10 @@
             .when("/changPassword/:userId", {
                 templateUrl: "views/user/templates/changePassword.view.client.html",
                 controller: "changePasswordController",
-                controllerAs: "model"
+                controllerAs: "model",
+                resolve: {
+                    checkLogin: checkLogin
+                }
             })
 
             // .when("/AllAvailableList", {
@@ -173,9 +176,23 @@
         //
         //     })
 
+    }
+
+    function checkLogin( userService, $q) {
+        var deferred =  $q.defer();
+        userService.checkLogin()
+            .then(function (user) {
+                if (user ==="0") {
+                    deferred.reject();
 
 
+                } else {
+                    deferred.resolve(user);
 
+                }
+
+            });
+        return deferred.promise;
 
     }
 
