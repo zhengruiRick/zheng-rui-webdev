@@ -22,7 +22,7 @@ app.put("/api/user/:userId", updateUser);
 app.delete("/api/user/:userId", deleteUser);
 app.get("/api/checkLogin", checkLogin);
 app.get('/auth/google',  passport.authenticate('google', { scope : ['profile', 'email'] }));
-app.get('/googleCallBack',
+app.get('/api/googleCallBack',
     passport.authenticate('google', {
         successRedirect: '/#!/profile',
         failureRedirect: '/#!/login'
